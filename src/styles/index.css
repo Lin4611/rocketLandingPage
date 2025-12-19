@@ -1,2 +1,4 @@
 @import "tailwindcss";
 @import "./common/_colors.css";
+@import "./common/_font.css";
+@import "./common/_radius.css";
