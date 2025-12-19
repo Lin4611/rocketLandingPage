@@ -1,0 +1,64 @@
+@theme {
+  --font-zh: "Noto Sans TC", sans-serif;
+  --font-en: "Josefin Sans", sans-serif;
+}
+  
+@utility heading-1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 428px) {
+  .heading-1 { font-size: 48px; }
+}
+
+
+@utility heading-2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 428px) {
+  .heading-2 { font-size: 36px; }
+}
+
+
+@utility heading-3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 428px) {
+  .heading-3 { font-size: 32px; }
+}
+
+@utility heading-4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 428px) {
+  .heading-4 { font-size: 28px; }
+}
+
+
+@utility body-1 { font-size: 20px; line-height: 1.5; }
+@utility body-2 { font-size: 18px; line-height: 1.5; }
+@utility body-3 { font-size: 16px; line-height: 1.5; }
+
+@media (min-width: 428px) {
+  .body-1 { font-size: 24px; }
+  .body-2 { font-size: 20px; }
+}
+
+@utility font-en {
+  font-family: var(--font-en);
+}
+
+@utility font-zh {
+  font-family: var(--font-zh);
+}
