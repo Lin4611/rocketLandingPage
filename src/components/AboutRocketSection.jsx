@@ -26,7 +26,7 @@ const AboutRocketSection = () => {
   return (
     <>
       {/* mobile */}
-      <section className="lg:hidden  py-[36px] px-[24px] bg-[rgba(229,235,255,1)] rounded-[24px]">
+      <section className="lg:hidden  py-[36px] px-[24px] bg-blue-100 rounded-[24px]">
         <div className="max-w-[428px] w-full mx-auto">
           <h3 className="text-neutral-700 font-en font-[700] leading-[1.5] tracking-[0.32px]">
             About Rocket
@@ -49,7 +49,7 @@ const AboutRocketSection = () => {
           <div className="flex flex-col gap-y-[24px]">
             {ROCKETS.map((rocket) => (
               <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
-                <h4 className="mb-[8px] heading-3 text-[rgba(54,54,54,1)]">
+                <h4 className="mb-[8px] heading-3 text-Neutral-700">
                   {rocket.title}
                 </h4>
                 <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
@@ -62,7 +62,7 @@ const AboutRocketSection = () => {
                     </div>
                   ))}
                 </div>
-                <div className="mb-[28px] text-[rgba(154,154,154,1)]">
+                <div className="mb-[28px] text-Neutral-500">
                   {rocket.titleEn}
                 </div>
                 <div className="flex flex-col items-center justify-center ">
@@ -101,7 +101,7 @@ const AboutRocketSection = () => {
             {ROCKETS.map((rocket) => (
               <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
                 <div className="">
-                  <h4 className="mb-[12px] heading-3 text-[rgba(54,54,54,1)]">
+                  <h4 className="mb-[12px] heading-3 text-Neutral-700">
                     {rocket.title}
                   </h4>
                   <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
@@ -114,7 +114,7 @@ const AboutRocketSection = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-[rgba(154,154,154,1)]">
+                  <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-Neutral-500">
                     {rocket.titleEn}
                   </div>
                 </div>
