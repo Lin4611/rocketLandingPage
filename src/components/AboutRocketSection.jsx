@@ -3,12 +3,32 @@ import rocketFrontend from "../assets/imgs/icon/about-rocket-frontend.svg";
 import rocketUi from "../assets/imgs/icon/about-rocket-ui.svg";
 
 const AboutRocketSection = () => {
+  const ROCKETS = [
+    {
+      title: "前端工程師",
+      tags: ["HTML", "CSS", "JavaScript"],
+      titleEn: "Front-end engineer",
+      img: rocketFrontend,
+    },
+    {
+      title: "後端工程師",
+      tags: ["C#", ".Net"],
+      titleEn: "Back-end engineer",
+      img: rocketBackend,
+    },
+    {
+      title: "UI 設計師",
+      tags: ["Figam", "HTML", "CSS"],
+      titleEn: "UI designer",
+      img: rocketUi,
+    },
+  ];
   return (
     <>
       {/* mobile */}
       <section className="lg:hidden  py-[36px] px-[24px] bg-[rgba(229,235,255,1)] rounded-[24px]">
         <div className="max-w-[428px] w-full mx-auto">
-          <h3 className="text-neutral-700 font-en text-[700] leading-[1.5] tracking-[0.32px]">
+          <h3 className="text-neutral-700 font-en font-[700] leading-[1.5] tracking-[0.32px]">
             About Rocket
           </h3>
           <h2 className="heading-1 mb-[16px]">什麼是火箭隊</h2>
@@ -27,84 +47,30 @@ const AboutRocketSection = () => {
           </div>
 
           <div className="flex flex-col gap-y-[24px]">
-            <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
-              <h4 className="mb-[8px] heading-3 text-[rgba(54,54,54,1)]">
-                前端工程師
-              </h4>
-              <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  HTML
+            {ROCKETS.map((rocket) => (
+              <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
+                <h4 className="mb-[8px] heading-3 text-[rgba(54,54,54,1)]">
+                  {rocket.title}
+                </h4>
+                <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
+                  {rocket.tags.map((tag, index) => (
+                    <div
+                      key={index}
+                      className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]"
+                    >
+                      {tag}
+                    </div>
+                  ))}
                 </div>
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  CSS
+                <div className="mb-[28px] text-[rgba(154,154,154,1)]">
+                  {rocket.titleEn}
                 </div>
-
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  JavaScript
-                </div>
-              </div>
-              <div className="mb-[28px] text-[rgba(154,154,154,1)]">
-                Front-end engineer
-              </div>
-              <div className="flex flex-col items-center justify-center ">
-                <img
-                  className="object-cover z-10"
-                  src={rocketFrontend}
-                  alt=""
-                />
-                <div className="px-[20px] w-full h-[60px] mt-[-52px] rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
-
-            <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
-              <h4 className="mb-[8px] heading-3 text-[rgba(54,54,54,1)]">
-                後端工程師
-              </h4>
-              <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  C#
-                </div>
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  .Net
-                </div>
-
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  JavaScript
+                <div className="flex flex-col items-center justify-center ">
+                  <img className="object-cover z-10" src={rocket.img} alt={rocket.title} />
+                  <div className="px-[20px] w-full h-[60px] mt-[-52px] rounded-[12px] bg-neutral-200"></div>
                 </div>
               </div>
-              <div className="mb-[28px] text-[rgba(154,154,154,1)]">
-                Back-end engineer
-              </div>
-              <div className="flex flex-col items-center justify-center ">
-                <img className="object-cover z-10" src={rocketBackend} alt="" />
-                <div className="px-[20px] w-full h-[60px] mt-[-52px] rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
-
-            <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
-              <h4 className="mb-[8px] heading-3 text-[rgba(54,54,54,1)]">
-                前端工程師
-              </h4>
-              <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  Figma
-                </div>
-
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  HTML
-                </div>
-                <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                  CSS
-                </div>
-              </div>
-              <div className="mb-[28px] text-[rgba(154,154,154,1)]">
-                UI designer
-              </div>
-              <div className="flex flex-col items-center justify-center ">
-                <img className="object-cover z-10" src={rocketUi} alt="" />
-                <div className="px-[20px] w-full h-[60px] mt-[-52px] rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -132,93 +98,36 @@ const AboutRocketSection = () => {
         </div>
         <div className="w-[636px] h-[592px] overflow-y-auto ">
           <div className="flex flex-col gap-y-[32px]">
-            <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
-              <div className="">
-                <h4 className="mb-[12px] heading-3 text-[rgba(54,54,54,1)]">
-                  前端工程師
-                </h4>
-                <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    HTML
+            {ROCKETS.map((rocket) => (
+              <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
+                <div className="">
+                  <h4 className="mb-[12px] heading-3 text-[rgba(54,54,54,1)]">
+                    {rocket.title}
+                  </h4>
+                  <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
+                    {rocket.tags.map((tag, index) => (
+                      <div
+                        key={index}
+                        className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]"
+                      >
+                        {tag}
+                      </div>
+                    ))}
                   </div>
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    CSS
-                  </div>
-
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    JavaScript
-                  </div>
-                </div>
-                <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-[rgba(154,154,154,1)]">
-                  Front-end engineer
-                </div>
-              </div>
-              <div className="w-[216px] relative">
-                <img
-                  className="object-cover z-10 absolute right-[40px] top-[24px]"
-                  src={rocketFrontend}
-                  alt=""
-                />
-                <div className="px-[20px] w-[169px] h-[208px] absolute right-0 rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
-
-            <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
-              <div className="">
-                <h4 className="mb-[12px] heading-3 text-[rgba(54,54,54,1)]">
-                  後端工程師
-                </h4>
-                <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    C#
-                  </div>
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    .Net
+                  <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-[rgba(154,154,154,1)]">
+                    {rocket.titleEn}
                   </div>
                 </div>
-                <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-[rgba(154,154,154,1)]">
-                  Back-end engineer
+                <div className="w-[216px] relative">
+                  <img
+                    className="object-cover z-10 absolute right-[40px] top-[24px]"
+                    src={rocket.img}
+                    alt={rocket.title}
+                  />
+                  <div className="px-[20px] w-[169px] h-[208px] absolute right-0 rounded-[12px] bg-neutral-200"></div>
                 </div>
               </div>
-              <div className="w-[216px] relative">
-                <img
-                  className="object-cover z-10 absolute right-[40px] top-[24px]"
-                  src={rocketBackend}
-                  alt=""
-                />
-                <div className="px-[20px] w-[169px] h-[208px] absolute right-0 rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
-
-            <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
-              <div className="">
-                <h4 className="mb-[12px] heading-3 text-[rgba(54,54,54,1)]">
-                  UI 設計師
-                </h4>
-                <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    Figma
-                  </div>
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    HTML
-                  </div>
-                  <div className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]">
-                    CSS
-                  </div>
-                </div>
-                <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-[rgba(154,154,154,1)]">
-                  UI designer
-                </div>
-              </div>
-              <div className="w-[216px] relative">
-                <img
-                  className="object-cover z-10 absolute right-[40px] top-[24px]"
-                  src={rocketUi}
-                  alt=""
-                />
-                <div className="px-[20px] w-[169px] h-[208px] absolute right-0 rounded-[12px] bg-neutral-200"></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
