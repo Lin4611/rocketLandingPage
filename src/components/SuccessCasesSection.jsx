@@ -11,9 +11,9 @@ const SuccessCasesSection = () => {
         <h2 className="heading-2! text-center mb-4 text-Neutral-700 lg:text-4xl! lg:mb-7">
           成功案例
         </h2>
-        <div className="w-full grid grid-rows-2 grid-flow-col gap-7 overflow-x-auto overflow-hidden scrollbar-hidden snap-x snap-mandatory ml-12 pr-24 lg:grid-cols-4 lg:grid-flow-row lg:grid-rows-none lg:overflow-visible lg:pr-0 lg:max-w-324 lg:mx-auto">
+        <div className="w-full grid grid-rows-2 grid-flow-col gap-7 overflow-x-auto overflow-hidden scrollbar-hidden snap-x snap-mandatory ml-12 pr-24 lg:grid-cols-4 lg:overflow-visible lg:pr-0 lg:max-w-324 lg:mx-auto">
           {cardIds.map((id) => (
-            <div key={id} className="w-60 h-40 r-sm snap-center lg:w-76.5 lg:h-50">
+            <div key={id} className={`w-60 h-40 r-sm snap-center lg:w-76.5 lg:h-50`}>
               <img
                 src={getImgsUrl(id)}
                 alt={`成功案例${id}`}
