@@ -1,3 +1,6 @@
+import bgImgPath from "../assets/imgs/bg/training-bg.png";
+import frontEndImgSm from "../assets/imgs/icon/training-img-frontend-sm.svg";
+
 const TrainingProgramsSection = () => {
   return (
     <>
@@ -12,14 +15,96 @@ const TrainingProgramsSection = () => {
 
           <div className="flex-1 overflow-hidden whitespace-nowrap">
             <div className="inline-block animate-marquee hover:[animation-play-state:paused]!">
-              <span className="inline-block">
+              <span className="inline-block font-en">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
-              <span className="inline-block ml-5">
+              <span className="inline-block font-en ml-5">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200">
+          <div
+            className="absolute z-0 inset-0 bg-repeat"
+            style={{
+              backgroundImage: `url(${bgImgPath})`,
+            }}
+          >
+            <img src={bgImgPath} alt="網格背景圖" className="" />
+          </div>
+          <section className="relative z-1">
+            <h3 className="absolute -top-8 left-12 body-1! tracking-[0.02em] font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap">
+              前端工程師
+            </h3>
+
+            {/* 內容 */}
+            <div className=" flex flex-col items-center pt-12.5 pb-8">
+              {/* 圖片 */}
+              <div className="w-54.5 h-50 mb-7">
+                <img
+                  src={frontEndImgSm}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              {/* 文字 */}
+              <div className="flex flex-col gap-8 px-12">
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    關於前端
+                  </p>
+                  <p className="font-en">
+                    <span className="whitespace-nowrap">主要專精 JavaScript 前端 (65%)、後端 (35%)</span>開發，投入語言為HTML、CSS、JavaScript，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">適合有一些 HTML、CSS、JS 基礎的學員報名</span>。
+                  </p>
+                </section>
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    應徵門檻
+                  </p>
+                  <div className="font-en pl-3">
+                    <div className="flex gap-1">
+                        <p>1.</p>
+                        <p>會用 CSS Flexbox 排過網頁，有 RWD 響應式網頁概念，需提交 CSS 切版作品，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">請在履歷上需附網頁切版作品</span>，Codepen、GitHub Pages 皆可。</p>
+                    </div>
+                     <div className="flex gap-1">
+                        <p>2.</p>
+                        <p>了解 JS 變數、陣列物件、DOM、監聽、AJAX 等知識，尚未熟練也沒關係。</p>
+                    </div>
+                  </div>
+                  
+                </section>
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    你會學到
+                  </p>
+                  <div className="font-en pl-3">
+                    <div className="flex gap-1">
+                        <p>1.</p>
+                        <p>網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS</p>
+                    </div>
+                     <div className="flex gap-1">
+                        <p>2.</p>
+                        <p>前端開發技能：JavaScript、TypeScript、ES6、SPA、JS plugin 整合、API 介接、NPM</p>
+                    </div>
+                    <div className="flex gap-1">
+                        <p>3.</p>
+                        <p>後端開發技能：Node.js、MongoDB、heroku、express、JWT</p>
+                    </div>
+                    <div className="flex gap-1">
+                        <p>4.</p>
+                        <p><span className="whitespace-nowrap">JS 框架：React(Hooks)、Vue3，會依照未</span>來你想投入的公司進行調整</p>
+                    </div>
+                    <div className="flex gap-1">
+                        <p>5.</p>
+                        <p><span className="whitespace-nowrap">程式版控：Git、GitHub、Git Flow 工作流</span>程</p>
+                    </div>
+                  </div>
+                  
+                </section>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </>
