@@ -15,8 +15,7 @@ body {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-}
-/* 跑馬燈速度 */
-.animate-step-marquee {
-  animation: marquee 10s steps(100) infinite; 
+  /* 跑馬燈速度 */
+  --animate-marquee: marquee 20s linear infinite;
+
 }

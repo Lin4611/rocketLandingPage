@@ -11,11 +11,11 @@ const TrainingProgramsSection = () => {
           </div>
 
           <div className="flex-1 overflow-hidden whitespace-nowrap">
-            <div className="inline-block animate-[marquee_20s_linear_infinite] hover:[animation-play-state:pause]">
+            <div className="inline-block animate-marquee hover:[animation-play-state:paused]!">
               <span className="inline-block">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
-              <span className="inline-block ml-3">
+              <span className="inline-block ml-5">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
             </div>
