@@ -1,4 +1,3 @@
-import * as Motion from "motion/react-client";
 import rocket_sm from "../assets/imgs/icon/banner-logo-rocket-sm.svg";
 import rocket_card_btn_sm from "../assets/imgs/icon/banner-btn-rocket-sm.svg";
 import rocket_card_highlight_sm from "../assets/imgs/icon/ic-highlight-coworking-sm.svg";
@@ -13,11 +12,17 @@ import coworkin_card_btn_lg from "../assets/imgs/icon/banner-btn-coworking-lg.sv
 import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
 import { useState } from "react";
 import React from "react";
-
-const marqueeTexts = [
-  "Let's join",
-  "．火箭隊培訓營 Rocket",
-  "．共同空間 Co-working space",
+import MarqueeContent from "./MarqueeContent";
+const marqueeItems = [
+  "Let’s join",
+  "- 火箭隊培訓營 Rocket -",
+  "- 共同空間 Co-working space -",
+  "Let’s join",
+  "- 火箭隊培訓營 Rocket -",
+  "- 共同空間 Co-working space -",
+  "Let’s join",
+  "- 火箭隊培訓營 Rocket -",
+  "- 共同空間 Co-working space -",
 ];
 const banner_bg = `bg-[url('../assets/imgs/bg/banner-bg.png')]`;
 const bannerTextList = [
@@ -74,29 +79,10 @@ const Header = () => {
   const [isSelected, setIsSelected] = useState("火箭隊");
   const [hoveredItem, setHoveredItem] = useState(null);
   return (
-    <header className="w-full py-2 flex flex-col items-center">
-      <div className="overflow-hidden w-full flex bg-Neutral-white sticky">
-        <Motion.div
-          className="w-full flex whitespace-nowrap"
-          animate={{ x: [0, -1000] }}
-          transition={{
-            duration: 10,
-            ease: "linear",
-            repeat: Infinity,
-            repeatType: "loop",
-          }}
-        >
-          <div className="flex gap-4 px-4 py-3">
-            {marqueeTexts.map((text, i) => (
-              <span key={`a-${i}`}>{text}</span>
-            ))}
-          </div>
-          <div className="flex gap-4 px-4 py-3">
-            {marqueeTexts.map((text, i) => (
-              <span key={`b-${i}`}>{text}</span>
-            ))}
-          </div>
-        </Motion.div>
+    <header className="w-full py-2 flex flex-col items-center justify-center">
+      <div className="sticky top-0 right-0 z-50 flex w-full overflow-hidden bg-Neutral-white backdrop-blur py-5 shadow-sm">
+        <MarqueeContent items={marqueeItems} />
+        <MarqueeContent items={marqueeItems} />
       </div>
       <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 transform-all duration-300 md:hidden lg:hidden">
         <div
@@ -198,7 +184,9 @@ const Header = () => {
                       !isActive ? "opacity-60" : ""
                     }`}
                   >
-                    <h1 className="heading-1 text-Neutral-700 md:text-[32px]">{item.title}</h1>
+                    <h1 className="heading-1 text-Neutral-700 md:text-[32px]">
+                      {item.title}
+                    </h1>
                     <h2 className="font-en text-neutral-500 text-xl font-bold ">
                       {item.subTitle}
                     </h2>
