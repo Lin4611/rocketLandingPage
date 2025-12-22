@@ -4,13 +4,13 @@ import rocket_card_btn_sm from "../assets/imgs/icon/banner-btn-rocket-sm.svg";
 import rocket_card_highlight_sm from "../assets/imgs/icon/ic-highlight-coworking-sm.svg";
 import coworkin_sm from "../assets/imgs/icon/banner-logo-coworking-sm.svg";
 import coworkin_card_btn_sm from "../assets/imgs/icon/banner-btn-coworking-sm.svg";
-import coworkin_card_btn_highlight from "../assets/imgs/icon/ic-highlight-rocket-sm.svg";
+import coworkin_card_highlight_sm from "../assets/imgs/icon/ic-highlight-rocket-sm.svg";
 import rocket_lg from "../assets/imgs/icon/banner-logo-rocket-lg.svg";
 import rocket_card_btn_lg from "../assets/imgs/icon/banner-btn-rocket-lg.svg";
-import rocket_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
+import rocket_card_highlight_lg from "../assets/imgs/icon/ic-highlight-coworking-lg.svg";
 import coworkin_lg from "../assets/imgs/icon/banner-logo-coworking-lg.svg";
 import coworkin_card_btn_lg from "../assets/imgs/icon/banner-btn-coworking-lg.svg";
-import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-coworking-lg.svg";
+import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
 import { useState } from "react";
 import React from "react";
 
@@ -39,7 +39,7 @@ const bannerTextList = [
     drop_shadow: "drop-shadow-[8px_8px_0_#EEE5FF]",
     btn_color: "bg-Primary-Violet-200",
     btn: coworkin_card_btn_sm,
-    highlight_pic: coworkin_card_btn_highlight,
+    highlight_pic: coworkin_card_highlight_sm,
   },
 ];
 const bannerTextListLg = [
@@ -49,7 +49,9 @@ const bannerTextListLg = [
     subTitle: "Bootcamp Rocket",
     desc: ["# 軟體工程師培訓營", "# 全程免費的扎實訓練", "# 帶你翻轉人生！"],
     img: rocket_lg,
+    btn_color: "bg-Primary-Blue-200",
     btn: rocket_card_btn_lg,
+    drop_shadow: "shadow-[8px_8px_0_#BFC9F0]",
     highlight_pic: rocket_card_highlight_lg,
   },
   {
@@ -63,13 +65,16 @@ const bannerTextListLg = [
     ],
     img: coworkin_lg,
     btn: coworkin_card_btn_lg,
+    btn_color: "bg-Primary-Violet-200",
+    drop_shadow: "shadow-[8px_8px_0_#EEE5FF]",
     highlight_pic: coworkin_card_highlight_lg,
   },
 ];
 const Header = () => {
   const [isSelected, setIsSelected] = useState("火箭隊");
+  const [hoveredItem, setHoveredItem] = useState(null);
   return (
-    <header className="w-full py-2">
+    <header className="w-full py-2 flex flex-col items-center">
       <div className="overflow-hidden w-full flex bg-Neutral-white sticky">
         <Motion.div
           className="w-full flex whitespace-nowrap"
@@ -153,34 +158,96 @@ const Header = () => {
         })}
       </div>
       <div
-        className={`hidden w-full relative lg:flex justify-between items-center max-w-360 ${banner_bg} absolute inset-0 bg-repeat px-34.5 pt-23 pb-30.5`}
+        className={`hidden w-full relative lg:flex justify-center items-center gap-20.5 ${banner_bg} absolute inset-0 bg-repeat pt-23 pb-30.5 px-12`}
       >
-        {bannerTextListLg.map((item, index) => (
-          <React.Fragment key={item.id}>
-            <div className="w-full max-w-110 flex flex-col items-center r-lg border-2 border-Neutral-300 bg-Neutral-white gap-6">
-              <div className="flex flex-col items-center justify-center -mt-9">
-                <h1 className="heading-1 text-Neutral-700">{item.title}</h1>
-                <h2 className="font-en text-neutral-500 text-xl font-bold leading-1.75 tracking-[0.02em]">
-                  {item.subTitle}
-                </h2>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-4">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-31 h-31 aspect-square object-contain"
-                />
-                <div className="flex flex-col justify-center items-center">
-                  {item.desc.map((text) => (
-                    <span className="heading-4 text-neutral-700" key={text}>
-                      {text}
-                    </span>
-                  ))}
+        {bannerTextListLg.map((item, index) => {
+          const isActive =
+            isSelected === item.title || hoveredItem === item.title;
+
+          return (
+            <React.Fragment key={item.id}>
+              <div
+                className={`w-full max-w-110 flex items-center z-5 relative cursor-pointer transform-all duration-300 ${
+                  isSelected !== item.title
+                    ? "hover:-mt-4"
+                    : ""
+                }`}
+                onClick={() => {
+                  setIsSelected(item.title);
+                }}
+                onMouseEnter={() => setHoveredItem(item.title)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <div
+                  className={`w-full flex flex-col r-lg border-2 border-Neutral-300 bg-Neutral-white gap-6 items-center relative ${
+                    isSelected === item.title
+                      ? item.drop_shadow
+                      : "drop-shadow-none"
+                  }`}
+                >
+                  <img
+                    src={item.highlight_pic}
+                    alt={item.title}
+                    className={`absolute w-10 h-12 object-contain -right-10 -top-10 ${
+                      isSelected === item.title ? "block" : "hidden"
+                    }`}
+                  />
+                  {!isActive && (
+                    <div className="absolute inset-0 bg-white/60 z-20 pointer-events-none rounded-[inherit]" />
+                  )}
+                  <div
+                    className={`flex flex-col items-center justify-center -mt-9 relative z-30 ${
+                      !isActive ? "opacity-60" : ""
+                    }`}
+                  >
+                    <h1 className="heading-1 text-Neutral-700">{item.title}</h1>
+                    <h2 className="font-en text-neutral-500 text-xl font-bold">
+                      {item.subTitle}
+                    </h2>
+                  </div>
+                  <div className="flex flex-col items-center justify-center gap-4">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-31 h-31 aspect-square object-contain"
+                    />
+                    <div className="flex flex-col justify-center items-center">
+                      {item.desc.map((text) => (
+                        <span
+                          className="text-xl font-bold leading-[1.75] text-neutral-700"
+                          key={text}
+                        >
+                          {text}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="w-30 h-35.75 relative flex items-center justify-center shrink-0 -mb-15.5">
+                    <div
+                      className={`absolute shrink-0 w-30 h-15 ${item.btn_color} rounded-b-full bottom-0`}
+                    >
+                      {!isActive && (
+                        <div className="absolute inset-0 bg-white/60 z-10 pointer-events-none" />
+                      )}
+                    </div>
+                    <img
+                      src={item.btn}
+                      alt={item.title}
+                      className={`w-25 h-27 object-cover z-30 ${
+                        !isActive ? "opacity-60" : ""
+                      }`}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </React.Fragment>
-        ))}
+              {index !== bannerTextListLg.length - 1 && (
+                <div className="heading-1 text-neutral-700 px-4 select-none">
+                  X
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })}
       </div>
     </header>
   );
