@@ -385,6 +385,17 @@ const TrainingProgramsSection = () => {
               </div>
             </div>
           </div>
+          <div className="w-full px-12.25 pt-10 pb-20 xl:max-w-296">
+              <h4 className="body-1! font-bold text-Neutral-700 mb-2">{coachInfo[currentCoachIdex].title} | {coachInfo[currentCoachIdex].name}</h4>
+              <ul className="text-Neutral-700 font-en">
+                {coachInfo[currentCoachIdex].experience.map((item,index)=>(
+                   <li key={index} className="flex gap-1 items-start">
+                    <span className="text-2xl">・</span>
+                    <p>{item}</p>
+                   </li>
+                ))}
+              </ul>
+          </div>
         </section>
       </section>
     </>
