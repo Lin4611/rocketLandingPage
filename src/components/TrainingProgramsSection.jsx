@@ -2,6 +2,10 @@ import bgImgPath from "../assets/imgs/bg/training-bg.png";
 import frontEndImgSm from "../assets/imgs/icon/training-img-frontend-sm.svg";
 import backendImgSm from "../assets/imgs/icon/training-img-backend-sm.svg";
 import UiUxImgSm from "../assets/imgs/icon/training-img-ui-sm.svg";
+import coachWeijie from "../assets/imgs/coach/coach-weijie-3x.png";
+import coachYinmin from "../assets/imgs/coach/coach-yinmin-3x.png";
+import coachJustin from "../assets/imgs/coach/coach-justin-3x.png";
+import coachCasper from "../assets/imgs/coach/coach-casper-3x.png";
 
 const TrainingProgramsSection = () => {
   return (
@@ -260,11 +264,18 @@ const TrainingProgramsSection = () => {
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
                       <p>1.</p>
-                      <p><span className="block whitespace-nowrap lg:inline">網頁前置規劃：Logic Flow、</span>Wireframe、網格系統、使用者體驗</p>
+                      <p>
+                        <span className="block whitespace-nowrap lg:inline">
+                          網頁前置規劃：Logic Flow、
+                        </span>
+                        Wireframe、網格系統、使用者體驗
+                      </p>
                     </div>
                     <div className="flex gap-1">
                       <p>2.</p>
-                      <p>介面繪製流程：Figma 操作、Mockup、Prototype、標註文件</p>
+                      <p>
+                        介面繪製流程：Figma 操作、Mockup、Prototype、標註文件
+                      </p>
                     </div>
                     <div className="flex gap-1">
                       <p>3.</p>
@@ -276,6 +287,59 @@ const TrainingProgramsSection = () => {
             </div>
           </section>
         </div>
+        <section className="w-full pt-10 overflow-hidden">
+          <div className="heading-3! text-Neutral-700 font-bold flex w-full px-12.25 xl:max-w-296">
+            <p>教練團</p>
+          </div>
+          {/* 輪播卡片區 */}
+          <div className="pt-13">
+            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25">
+              <div className="flex gap-7 px-12.25 w-max py-6">
+                {/* 圖片區 */}
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center">
+                    <p>廖 洧 杰</p>
+                  </div>
+                  <img
+                    className="absolute -top-5.5 w-55 h-auto object-bottom-left z-2"
+                    src={coachWeijie}
+                    alt="廖洧杰"
+                  />
+                </div>
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center">
+                    <p>穎 旻</p>
+                  </div>
+                  <img
+                    className="absolute -top-5.5 w-55 h-auto object-bottom-left"
+                    src={coachYinmin}
+                    alt="穎 旻"
+                  />
+                </div>
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center">
+                    <p>賈 斯 汀</p>
+                  </div>
+                  <img
+                    className="absolute -top-5.5 w-55 h-auto object-bottom-left"
+                    src={coachJustin}
+                    alt="賈斯汀"
+                  />
+                </div>
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center">
+                    <p>卡 斯 伯</p>
+                  </div>
+                  <img
+                    className="absolute -top-5.5 w-55 h-auto object-bottom-left"
+                    src={coachCasper}
+                    alt="卡斯伯"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );
