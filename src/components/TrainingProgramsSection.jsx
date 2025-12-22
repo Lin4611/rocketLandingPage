@@ -293,45 +293,45 @@ const TrainingProgramsSection = () => {
           </div>
           {/* 輪播卡片區 */}
           <div className="pt-13">
-            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 lg:overflow-visible xl:scroll-pl-0">
-              <div className="flex gap-7 px-12.25 w-max py-6 xl:grid xl:grid-cols-4 lg:w-full lg:mx-auto lg:px-0 lg:gap-6">
+            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 xl:overflow-visible xl:scroll-pl-0">
+              <div className="flex gap-7 px-12.25 w-max py-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6">
                 {/* 圖片區 */}
-                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start xl:w-62.75 xl:h-40">
-                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center xl:w-12 xl:h-26 xl:pd-4 xl:font-en xl:left-45.75">
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start lg:w-62.75 lg:h-40">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75">
                     <p>廖 洧 杰</p>
                   </div>
                   <img
-                    className="absolute -top-5.5 w-55 h-auto object-bottom-left z-2 xl:w-45"
+                    className="absolute -top-6 w-55 h-auto object-bottom-left z-2 lg:w-45"
                     src={coachWeijie}
                     alt="廖洧杰"
                   />
                 </div>
-                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start xl:w-62.75 xl:h-40">
-                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center xl:w-12 xl:h-26 xl:pd-4 xl:font-en xl:left-45.75">
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start lg:w-62.75 lg:h-40">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75">
                     <p>穎 旻</p>
                   </div>
                   <img
-                    className="absolute -top-5.5 w-55 h-auto object-bottom-left xl:w-45"
+                    className="absolute -top-6 w-55 h-auto object-bottom-left lg:w-45 "
                     src={coachYinmin}
                     alt="穎 旻"
                   />
                 </div>
-                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start xl:w-62.75 xl:h-40">
-                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-lr] flex justify-center items-center xl:w-12 xl:h-26 xl:pd-4 xl:font-en xl:left-45.75">
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start lg:w-62.75 lg:h-40">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-lr] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75">
                     <p>賈 斯 汀</p>
                   </div>
                   <img
-                    className="absolute -top-5.5 w-55 h-auto object-bottom-left xl:w-45"
+                    className="absolute -top-6 w-55 h-auto object-bottom-left lg:w-45"
                     src={coachJustin}
                     alt="賈斯汀"
                   />
                 </div>
-                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start xl:w-62.75 xl:h-40">
-                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center xl:w-12 xl:h-26 xl:pd-4 xl:font-en xl:left-45.75">
+                <div className="relative w-83 h-50 r-lg border-2 border-Neutral-700 bg-Neutral-white shrink-0 active:bg-Primary-Blue-100 snap-start lg:w-62.75 lg:h-40">
+                  <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75">
                     <p>卡 斯 伯</p>
                   </div>
                   <img
-                    className="absolute -top-5.5 w-55 h-auto object-bottom-left xl:w-45"
+                    className="absolute -top-6 w-55 h-auto object-bottom-left lg:w-45"
                     src={coachCasper}
                     alt="卡斯伯"
                   />
