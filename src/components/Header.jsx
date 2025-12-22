@@ -14,13 +14,13 @@ import { useState } from "react";
 import React from "react";
 import MarqueeContent from "./MarqueeContent";
 const marqueeItems = [
-  "Let’s join",
+  "Let's join",
   "- 火箭隊培訓營 Rocket -",
   "- 共同空間 Co-working space -",
-  "Let’s join",
+  "Let's join",
   "- 火箭隊培訓營 Rocket -",
   "- 共同空間 Co-working space -",
-  "Let’s join",
+  "Let's join",
   "- 火箭隊培訓營 Rocket -",
   "- 共同空間 Co-working space -",
 ];
@@ -79,7 +79,7 @@ const Header = () => {
   const [isSelected, setIsSelected] = useState("火箭隊");
   const [hoveredItem, setHoveredItem] = useState(null);
   return (
-    <header className="w-full py-2 flex flex-col items-center justify-center">
+    <header className="w-full flex flex-col items-center justify-center">
       <div className="sticky top-0 right-0 z-50 flex w-full overflow-hidden bg-Neutral-white backdrop-blur py-5 shadow-sm">
         <MarqueeContent items={marqueeItems} />
         <MarqueeContent items={marqueeItems} />
@@ -109,7 +109,7 @@ const Header = () => {
                 }`}
               />
               <div
-                className={`w-full flex-1 flex flex-col bg-Neutral-white border-2 border-Neutral-300 r-md py-6 pl-6 gap-2 max-w-73.5 z-2 ${
+                className={`w-full flex-1 flex flex-col bg-Neutral-white border-2 border-Neutral-300 r-md py-6 pl-6 gap-2  z-2 ${
                   isSelected === item.title
                     ? item.drop_shadow
                     : "drop-shadow-none"
