@@ -1,5 +1,7 @@
 import bgImgPath from "../assets/imgs/bg/training-bg.png";
 import frontEndImgSm from "../assets/imgs/icon/training-img-frontend-sm.svg";
+import backendImgSm from "../assets/imgs/icon/training-img-backend-sm.svg";
+import UiUxImgSm from "../assets/imgs/icon/training-img-ui-sm.svg";
 
 const TrainingProgramsSection = () => {
   return (
@@ -24,8 +26,8 @@ const TrainingProgramsSection = () => {
             </div>
           </div>
         </div>
-
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 lg:r-sm">
+        {/* 組別卡片區 */}
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -78,7 +80,10 @@ const TrainingProgramsSection = () => {
                       <p>
                         <span className="lg:whitespace-nowrap">
                           會用 CSS Flexbox 排過網頁，有 RWD
-                          響應式網頁概念，需提交 CSS 切版作品，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold lg:font-medium lg:bg-none">請</span>
+                          響應式網頁概念，需提交 CSS 切版作品，
+                          <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold lg:font-medium lg:bg-none">
+                            請
+                          </span>
                         </span>
                         <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
                           在履歷上需附網頁切版作品
@@ -136,6 +141,134 @@ const TrainingProgramsSection = () => {
                         </span>
                         程
                       </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
+          <div
+            className="absolute z-0 inset-0 bg-repeat"
+            style={{
+              backgroundImage: `url(${bgImgPath})`,
+            }}
+          >
+            <img src={bgImgPath} alt="網格背景圖" />
+          </div>
+          <section>
+            {/* 內容 */}
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+                <span>後端工程師</span>
+              </h3>
+              {/* 圖片 */}
+              <div className="w-54.5 h-50 mb-7 lg:w-70.5 lg:h-70 lg:mb-0">
+                <img
+                  src={backendImgSm}
+                  className="w-full h-full object-contain"
+                  alt="後端工程師"
+                />
+              </div>
+              {/* 文字 */}
+              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    關於後端
+                  </p>
+                  <p className="font-en">
+                    <span className="whitespace-nowrap">
+                      後端工程師組主要專注為後端開發，投入後端
+                    </span>
+                    語言為 C#、.Net，
+                    <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
+                      適合無程式背景的學員報名
+                    </span>
+                    。
+                  </p>
+                </section>
+
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    你會學到
+                  </p>
+                  <div className="font-en pl-3">
+                    <div className="flex gap-1">
+                      <p>1.</p>
+                      <p>後端語言：C#</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <p>2.</p>
+                      <p>程式架構：ASP.NET Web Form、ASP.NET MVC、Web API</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <p>3.</p>
+                      <p>資料庫與雲端主機：MSSQL、Microsoft Azure</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 lg:r-sm">
+          <div
+            className="absolute z-0 inset-0 bg-repeat"
+            style={{
+              backgroundImage: `url(${bgImgPath})`,
+            }}
+          >
+            <img src={bgImgPath} alt="網格背景圖" />
+          </div>
+          <section>
+            {/* 內容 */}
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap flex justify-center lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+                <span>UI 設計師</span>
+              </h3>
+              {/* 圖片 */}
+              <div className="w-54.5 h-50 mb-7 lg:w-70.5 lg:h-70 lg:mb-0">
+                <img
+                  src={UiUxImgSm}
+                  className="w-full h-full object-contain"
+                  alt="UI 設計師"
+                />
+              </div>
+              {/* 文字 */}
+              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    關於設計
+                  </p>
+                  <p className="font-en">
+                    <span className="whitespace-nowrap">
+                      主要以網頁 UI 設計 50%、網頁前端 50% 的雙
+                    </span>
+                    技能樹養成，
+                    <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
+                      適合具備視覺背景，操作過繪圖軟體尤佳，歡迎無工作經驗的學員報名
+                    </span>
+                    。
+                  </p>
+                </section>
+
+                <section className="text-Neutral-700">
+                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                    你會學到
+                  </p>
+                  <div className="font-en pl-3">
+                    <div className="flex gap-1">
+                      <p>1.</p>
+                      <p><span className="block whitespace-nowrap lg:inline">網頁前置規劃：Logic Flow、</span>Wireframe、網格系統、使用者體驗</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <p>2.</p>
+                      <p>介面繪製流程：Figma 操作、Mockup、Prototype、標註文件</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <p>3.</p>
+                      <p>網頁切版技能：HTML5、CSS、Bootstrap5</p>
                     </div>
                   </div>
                 </section>
