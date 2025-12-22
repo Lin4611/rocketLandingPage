@@ -5,27 +5,27 @@ const TrainingProgramsSection = () => {
   return (
     <>
       <section className="flex flex-col items-center bg-Neutral-100">
-        <h2 className="heading-2! text-Neutral-700 text-center -mt-5 mb-2">
+        <h2 className="heading-2! text-Neutral-700 text-center -mt-5 mb-2 md:text-4xl! md:mb-3">
           關於培訓
         </h2>
-        <div className="flex justify-center items-center gap-3 bg-Neutral-white px-5 py-3 w-83 rounded-[50px] shadow-[0_2px_4px_0_#E8E8E8] overflow-hidden text-Neutral-700 text-[14px] leading-normal tracking-[0.02em] mb-20">
+        <div className="flex justify-center items-center gap-3 bg-Neutral-white px-5 py-3 w-83 rounded-[50px] shadow-[0_2px_4px_0_#E8E8E8] overflow-hidden text-Neutral-700 text-[14px] leading-normal tracking-[0.02em] mb-20 lg:w-159 lg:text-[16px]">
           <div className="font-bold pr-3 border-r-2 border-Neutral-200 shrink-0">
             近期梯次
           </div>
 
           <div className="flex-1 overflow-hidden whitespace-nowrap">
-            <div className="inline-block animate-marquee hover:[animation-play-state:paused]!">
+            <div className="inline-block animate-marquee hover:[animation-play-state:paused]! lg:animate-none">
               <span className="inline-block font-en">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
-              <span className="inline-block font-en ml-5">
+              <span className="inline-block font-en ml-5 lg:hidden">
                 第十三梯 (2023/5/8~2023/11/30) 、第十四梯 (2023/7/31~2024/2/28)
               </span>
             </div>
           </div>
         </div>
 
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 xl:w-full xl:max-w-269 xl:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 lg:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -34,14 +34,14 @@ const TrainingProgramsSection = () => {
           >
             <img src={bgImgPath} alt="網格背景圖" />
           </div>
-          <section className="relative z-1">
+          <section>
             {/* 內容 */}
-            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto xl:flex-row-reverse xl: max-w-237 xl:justify-center xl:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! tracking-[0.02em] font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap xl:left-0">
-                前端工程師
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+                <span>前端工程師</span>
               </h3>
               {/* 圖片 */}
-              <div className="w-54.5 h-50 mb-7 xl:w-70.5 xl:h-70 xl:mb-0">
+              <div className="w-54.5 h-50 mb-7 lg:w-70.5 lg:h-70 lg:mb-0">
                 <img
                   src={frontEndImgSm}
                   className="w-full h-full object-contain"
@@ -49,7 +49,7 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 xl:px-0 xl:max-w-154.5">
+              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於前端
@@ -58,7 +58,7 @@ const TrainingProgramsSection = () => {
                     <span className="whitespace-nowrap">
                       主要專精 JavaScript 前端 (65%)、後端 (35%)
                     </span>
-                    <span className="block xl:inline">
+                    <span className="block lg:inline">
                       開發，投入語言為HTML、CSS、
                     </span>
                     JavaScript，
@@ -76,9 +76,9 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>1.</p>
                       <p>
-                        <span className="xl:whitespace-nowrap">
+                        <span className="lg:whitespace-nowrap">
                           會用 CSS Flexbox 排過網頁，有 RWD
-                          響應式網頁概念，需提交 CSS 切版作品，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold xl:font-medium xl:bg-none">請</span>
+                          響應式網頁概念，需提交 CSS 切版作品，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold lg:font-medium lg:bg-none">請</span>
                         </span>
                         <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
                           在履歷上需附網頁切版作品
