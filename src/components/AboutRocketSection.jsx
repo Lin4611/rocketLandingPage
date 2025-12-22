@@ -18,7 +18,7 @@ const AboutRocketSection = () => {
     },
     {
       title: "UI 設計師",
-      tags: ["Figam", "HTML", "CSS"],
+      tags: ["Figma", "HTML", "CSS"],
       titleEn: "UI designer",
       img: rocketUi,
     },
@@ -26,19 +26,19 @@ const AboutRocketSection = () => {
   return (
     <>
       {/* mobile */}
-      <section className="lg:hidden  py-[36px] px-[24px] bg-blue-100 rounded-[24px]">
-        <div className="max-w-[428px] w-full mx-auto">
-          <h3 className="text-neutral-700 font-en font-[700] leading-[1.5] tracking-[0.32px]">
+      <section className="lg:hidden py-9 text-Neutral-700 bg-Primary-Blue-100 rounded-[24px]">
+        <div className="w-83  mx-auto">
+          <h3 className="ml-1 font-en font-bold leading-normal tracking-[0.32px]">
             About Rocket
           </h3>
-          <h2 className="heading-1 mb-[16px]">什麼是火箭隊</h2>
-          <div className="mb-[24px] flex flex-col gap-y-[24px]">
+          <h2 className="heading-1 mb-4">什麼是火箭隊</h2>
+          <div className="mb-6 flex flex-col gap-y-6">
             <p className="body-3">
               火箭隊位於高雄的工程師培訓營，針對市場急需的前端、後端工程師與 UI
               設計師職缺而設。
-              <span className="font-[700]">為期七個月的免費課程</span>
+              <span className="font-bold">為期七個月的免費課程</span>
               ，學員全程參與，
-              <span className="font-[700]">僅需支付場地費</span>。
+              <span className="font-bold">僅需支付場地費</span>。
             </p>
 
             <p className="body-3">
@@ -46,28 +46,28 @@ const AboutRocketSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-y-[24px]">
+          <div className="flex flex-col gap-y-6">
             {ROCKETS.map((rocket) => (
-              <div className="rounded-[24px] bg-[#fff] py-[16px] px-[20px]">
-                <h4 className="mb-[8px] heading-3 text-Neutral-700">
+              <div className="rounded-[24px] bg-white py-4 px-5">
+                <h4 className="mb-2 heading-3 text-Neutral-700">
                   {rocket.title}
                 </h4>
-                <div className="mb-[12px] text-Primary-Blue-400 flex gap-x-[8px]">
+                <div className="mb-3 text-Primary-Blue-400 flex gap-x-2 ">
                   {rocket.tags.map((tag, index) => (
                     <div
                       key={index}
-                      className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]"
+                      className="border-2 border-Primary-Blue-300 rounded-[20px] py-2 px-4"
                     >
                       {tag}
                     </div>
                   ))}
                 </div>
-                <div className="mb-[28px] text-Neutral-500">
+                <div className="mb-7 text-Neutral-500">
                   {rocket.titleEn}
                 </div>
                 <div className="flex flex-col items-center justify-center ">
                   <img className="object-cover z-10" src={rocket.img} alt={rocket.title} />
-                  <div className="px-[20px] w-full h-[60px] mt-[-52px] rounded-[12px] bg-neutral-200"></div>
+                  <div className=" w-full h-15 -mt-13 rounded-[12px] bg-neutral-200"></div>
                 </div>
               </div>
             ))}
@@ -76,19 +76,19 @@ const AboutRocketSection = () => {
       </section>
 
       {/* desktop */}
-      <section className="max-lg:hidden  flex flex-wrap justify-center gap-x-[72px] bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-xl:rounded-[40px]">
-        <div className="w-[526px] ">
-          <h3 className="text-neutral-700 font-en text-[700] text-[20px] leading-[1.5] tracking-[0.4px]">
+      <section className="max-lg:hidden text-Neutral-700 flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-xl:rounded-[40px]">
+        <div className="w-131.5 ">
+          <h3 className="font-en font-bold text-[20px] leading-normal tracking-[0.4px]">
             About Rocket
           </h3>
-          <h2 className="heading-1 mb-[16px]">什麼是火箭隊</h2>
-          <div className="mb-[24px] flex flex-col gap-y-[24px] body-3 text-[20px]">
+          <h2 className="heading-1 ml-1 mb-10">什麼是火箭隊</h2>
+          <div className="mb-6 flex flex-col gap-y-6 body-3 text-[20px]">
             <p className="">
               火箭隊位於高雄的工程師培訓營，針對市場急需的前端、後端工程師與 UI
               設計師職缺而設。
-              <span className="font-[700]">為期七個月的免費課程</span>
+              <span className="font-bold">為期七個月的免費課程</span>
               ，學員全程參與，
-              <span className="font-[700]">僅需支付場地費</span>。
+              <span className="font-bold">僅需支付場地費</span>。
             </p>
 
             <p className="">
@@ -96,35 +96,35 @@ const AboutRocketSection = () => {
             </p>
           </div>
         </div>
-        <div className="w-[636px] h-[592px] overflow-y-auto ">
-          <div className="flex flex-col gap-y-[32px]">
+        <div className="w-159 h-148 overflow-y-auto ">
+          <div className="flex flex-col gap-y-8">
             {ROCKETS.map((rocket) => (
-              <div className="h-[280px] rounded-[24px] flex justify-between bg-[#fff] py-[36px] px-[36px]">
+              <div className="h-70 rounded-[24px] flex justify-between bg-white py-9 px-9">
                 <div className="">
-                  <h4 className="mb-[12px] heading-3 text-Neutral-700">
+                  <h4 className="mb-3 heading-3 text-Neutral-700">
                     {rocket.title}
                   </h4>
-                  <div className="mb-[72px] text-Primary-Blue-400 flex gap-x-[8px]">
+                  <div className="mb-18 text-Primary-Blue-400 flex gap-x-3">
                     {rocket.tags.map((tag, index) => (
                       <div
                         key={index}
-                        className="border-2 border-Primary-Blue-300 rounded-[20px] py-[8px] px-[16px]"
+                        className="border-2 border-Primary-Blue-300 rounded-[20px] py-2 px-4"
                       >
                         {tag}
                       </div>
                     ))}
                   </div>
-                  <div className="font-[700] text-[24px] tracking-[1.5] leading-[1.2px] text-Neutral-500">
+                  <div className="font-bold text-[24px] tracking-[1.5] leading-[1.2px] text-Neutral-500">
                     {rocket.titleEn}
                   </div>
                 </div>
-                <div className="w-[216px] relative">
+                <div className="w-55 relative">
                   <img
-                    className="object-cover z-10 absolute right-[40px] top-[24px]"
+                    className="object-cover z-10 absolute right-14 top-6"
                     src={rocket.img}
                     alt={rocket.title}
                   />
-                  <div className="px-[20px] w-[169px] h-[208px] absolute right-0 rounded-[12px] bg-neutral-200"></div>
+                  <div className="w-42.25 h-52 absolute right-0 rounded-[12px] bg-neutral-200"></div>
                 </div>
               </div>
             ))}
