@@ -35,13 +35,9 @@ const TrainingProgramsSection = () => {
             <img src={bgImgPath} alt="網格背景圖" />
           </div>
           <section className="relative z-1">
-            {/* <h3 className="absolute -top-8 left-12 body-1! tracking-[0.02em] font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap">
-              前端工程師
-            </h3> */}
-
             {/* 內容 */}
             <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto xl:flex-row-reverse xl: max-w-237 xl:justify-center xl:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! tracking-[0.02em] font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap">
+              <h3 className="absolute -top-8 left-12 body-1! tracking-[0.02em] font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap xl:left-0">
                 前端工程師
               </h3>
               {/* 圖片 */}
@@ -62,7 +58,10 @@ const TrainingProgramsSection = () => {
                     <span className="whitespace-nowrap">
                       主要專精 JavaScript 前端 (65%)、後端 (35%)
                     </span>
-                    開發，投入語言為HTML、CSS、JavaScript，
+                    <span className="block xl:inline">
+                      開發，投入語言為HTML、CSS、
+                    </span>
+                    JavaScript，
                     <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
                       適合有一些 HTML、CSS、JS 基礎的學員報名
                     </span>
@@ -77,10 +76,12 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>1.</p>
                       <p>
-                        會用 CSS Flexbox 排過網頁，有 RWD 響應式網頁概念，需提交
-                        CSS 切版作品，
+                        <span className="xl:whitespace-nowrap">
+                          會用 CSS Flexbox 排過網頁，有 RWD
+                          響應式網頁概念，需提交 CSS 切版作品，<span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold xl:font-medium xl:bg-none">請</span>
+                        </span>
                         <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
-                          請在履歷上需附網頁切版作品
+                          在履歷上需附網頁切版作品
                         </span>
                         ，Codepen、GitHub Pages 皆可。
                       </p>
