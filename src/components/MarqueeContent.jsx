@@ -12,7 +12,7 @@ const MarqueeContent = ({ items }) => {
       className="flex min-w-full shrink-0 items-center justify-around"
     >
       {items.map((item, index) => (
-        <span key={index} className="mx-4 whitespace-nowrap font-bold text-Neutral-700">
+        <span key={index} className="mx-4 whitespace-nowrap font-bold text-Neutral-700 font-en">
           {item}
         </span>
       ))}
