@@ -6,6 +6,7 @@ import coachWeijie from "../assets/imgs/coach/coach-weijie-3x.png";
 import coachYinmin from "../assets/imgs/coach/coach-yinmin-3x.png";
 import coachJustin from "../assets/imgs/coach/coach-justin-3x.png";
 import coachCasper from "../assets/imgs/coach/coach-casper-3x.png";
+import goIcon from "../assets/imgs/icon/ic-go-rocket.svg";
 import { useState } from "react";
 
 const coachInfo = [
@@ -72,7 +73,7 @@ const coachInfo = [
   },
 ];
 
-const coachImages = [ coachWeijie,coachYinmin,coachJustin,coachCasper];
+const coachImages = [coachWeijie, coachYinmin, coachJustin, coachCasper];
 
 const TrainingProgramsSection = () => {
   const [currentCoachIdex, setCurrentIndex] = useState(0);
@@ -379,24 +380,37 @@ const TrainingProgramsSection = () => {
                     <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75 transition-transform group-hover:-translate-y-4">
                       <p>{coach.name.split("").join(" ")}</p>
                     </div>
-                    <img className="absolute -top-6 w-55 h-auto object-bottom-left z-2 lg:w-45" src={coachImages[index]} alt={coach.name}/>
+                    <img
+                      className="absolute -top-6 w-55 h-auto object-bottom-left z-2 lg:w-45"
+                      src={coachImages[index]}
+                      alt={coach.name}
+                    />
                   </div>
                 ))}
               </div>
             </div>
           </div>
           <div className="w-full px-12.25 pt-10 pb-20 xl:max-w-296">
-              <h4 className="body-1! font-bold text-Neutral-700 mb-2">{coachInfo[currentCoachIdex].title} | {coachInfo[currentCoachIdex].name}</h4>
-              <ul className="text-Neutral-700 font-en">
-                {coachInfo[currentCoachIdex].experience.map((item,index)=>(
-                   <li key={index} className="flex gap-1 items-start">
-                    <span className="text-2xl">・</span>
-                    <p>{item}</p>
-                   </li>
-                ))}
-              </ul>
+            <h4 className="body-1! font-bold text-Neutral-700 mb-2">
+              {coachInfo[currentCoachIdex].title} |{" "}
+              {coachInfo[currentCoachIdex].name}
+            </h4>
+            <ul className="text-Neutral-700 font-en">
+              {coachInfo[currentCoachIdex].experience.map((item, index) => (
+                <li key={index} className="flex gap-1 items-start">
+                  <span className="text-2xl">・</span>
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
+        <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5">
+          <a href="https://register.rocket-coding.com/" target="_blank" className="flex item-center gap-1">
+            <p className="heading-3! text-Neutral-700 self-center">馬上報名！</p>
+            <img src={goIcon} alt="goIcon" className="hidden group-hover:block group-hover:transition-all group-hover:duration-1000"/>
+          </a>
+        </div>
       </section>
     </>
   );
