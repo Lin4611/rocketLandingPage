@@ -26,9 +26,9 @@ const AboutRocketSection = () => {
   return (
     <>
       {/* mobile */}
-      <section className="lg:hidden py-9 bg-Primary-Blue-100 rounded-[24px]">
+      <section className="lg:hidden py-9 text-Neutral-700 bg-Primary-Blue-100 rounded-[24px]">
         <div className="w-83  mx-auto">
-          <h3 className="ml-1 text-neutral-700 font-en font-bold leading-normal tracking-[0.32px]">
+          <h3 className="ml-1 font-en font-bold leading-normal tracking-[0.32px]">
             About Rocket
           </h3>
           <h2 className="heading-1 mb-4">什麼是火箭隊</h2>
@@ -76,9 +76,9 @@ const AboutRocketSection = () => {
       </section>
 
       {/* desktop */}
-      <section className="max-lg:hidden flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-xl:rounded-[40px]">
+      <section className="max-lg:hidden text-Neutral-700 flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-xl:rounded-[40px]">
         <div className="w-131.5 ">
-          <h3 className="font-en text-[700] text-[20px] leading-normal tracking-[0.4px]">
+          <h3 className="font-en font-bold text-[20px] leading-normal tracking-[0.4px]">
             About Rocket
           </h3>
           <h2 className="heading-1 ml-1 mb-10">什麼是火箭隊</h2>
