@@ -98,7 +98,7 @@ const Header = () => {
           </div>
         </Motion.div>
       </div>
-      <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 lg:hidden">
+      <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 transform-all duration-300 md:hidden lg:hidden">
         <div
           className={`${banner_bg} absolute inset-0 bg-repeat opacity-50 z-0`}
         ></div>
@@ -135,7 +135,7 @@ const Header = () => {
                     alt={item.title}
                     className="w-12 h-12 aspect-square object-contain"
                   />
-                  <h1 className="heading-1 text-neutral-700 whitespace-nowrap">
+                  <h1 className="heading-1 text-neutral-700 whitespace-nowrap md:text-2xl">
                     {item.title}
                   </h1>
                 </div>
@@ -158,7 +158,7 @@ const Header = () => {
         })}
       </div>
       <div
-        className={`hidden w-full relative lg:flex justify-center items-center gap-20.5 ${banner_bg} absolute inset-0 bg-repeat pt-23 pb-30.5 px-12`}
+        className={`hidden w-full relative md:flex lg:flex justify-center items-center md:gap-15 lg:gap-20.5 ${banner_bg} absolute inset-0 bg-repeat pt-23 pb-30.5 px-12 transform-all duration-300`}
       >
         {bannerTextListLg.map((item, index) => {
           const isActive =
@@ -168,9 +168,7 @@ const Header = () => {
             <React.Fragment key={item.id}>
               <div
                 className={`w-full max-w-110 flex items-center z-5 relative cursor-pointer transform-all duration-300 ${
-                  isSelected !== item.title
-                    ? "hover:-mt-4"
-                    : ""
+                  isSelected !== item.title ? "hover:-mt-4" : ""
                 }`}
                 onClick={() => {
                   setIsSelected(item.title);
@@ -200,8 +198,8 @@ const Header = () => {
                       !isActive ? "opacity-60" : ""
                     }`}
                   >
-                    <h1 className="heading-1 text-Neutral-700">{item.title}</h1>
-                    <h2 className="font-en text-neutral-500 text-xl font-bold">
+                    <h1 className="heading-1 text-Neutral-700 md:text-[32px]">{item.title}</h1>
+                    <h2 className="font-en text-neutral-500 text-xl font-bold ">
                       {item.subTitle}
                     </h2>
                   </div>
@@ -214,7 +212,7 @@ const Header = () => {
                     <div className="flex flex-col justify-center items-center">
                       {item.desc.map((text) => (
                         <span
-                          className="text-xl font-bold leading-[1.75] text-neutral-700"
+                          className="text-xl font-bold leading-[1.75] text-neutral-700 md:text-[16px]"
                           key={text}
                         >
                           {text}
