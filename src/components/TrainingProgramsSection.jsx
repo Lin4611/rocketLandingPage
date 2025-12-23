@@ -407,8 +407,12 @@ const TrainingProgramsSection = () => {
         </section>
         <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5 cursor-pointer lg:w-full lg:max-w-269">
           <a href="https://register.rocket-coding.com/" target="_blank" className="flex item-center gap-1">
-            <p className="heading-3! text-Neutral-700 self-center">馬上報名！</p>
-            <img src={goIcon} alt="goIcon" className="hidden group-hover:block group-hover:transition-all group-hover:duration-1000"/>
+            <div className="heading-3! h-10 flex justify-center items-center text-Neutral-700 transition-transform duration-300 group-hover:-translate-x-1 lg:h-12">
+              <p>馬上報名！</p></div>
+            <div className="h-full w-0 scale-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-12">
+              <img src={goIcon} alt="goIcon" className="w-full h-auto"/>
+            </div>
+            
           </a>
         </div>
       </section>
