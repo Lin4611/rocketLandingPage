@@ -149,7 +149,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="min-w-3 text-center">1.</p>
                       <p>
                         <span className="lg:whitespace-nowrap">
                           會用 CSS Flexbox 排過網頁，有 RWD
@@ -179,7 +179,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="min-w-3 text-center">1.</p>
                       <p>
                         網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS
                       </p>
@@ -268,7 +268,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="w-3 text-center">1.</p>
                       <p>後端語言：C#</p>
                     </div>
                     <div className="flex gap-1">
@@ -332,7 +332,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="w-3 text-center">1.</p>
                       <p>
                         <span className="block whitespace-nowrap lg:inline">
                           網頁前置規劃：Logic Flow、
