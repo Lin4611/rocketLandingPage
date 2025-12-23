@@ -8,3 +8,14 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+@theme {
+  /* 跑馬燈動畫 */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  /* 跑馬燈速度 */
+  --animate-marquee: marquee 20s linear infinite;
+
+}
