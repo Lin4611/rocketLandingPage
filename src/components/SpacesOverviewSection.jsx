@@ -192,7 +192,7 @@ const SpacesOverviewSection = () => {
         </div>
       </section>
       {/* 照片輪播區 */}
-        <div className="w-full pt-10 pl-12 pb-20 lg:px-0 ">
+        <div className="w-full max-w-360 pt-10 pl-12 pb-20 lg:px-0 lg:mx-auto ">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={24}
