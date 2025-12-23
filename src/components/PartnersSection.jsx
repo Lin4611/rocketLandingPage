@@ -21,61 +21,80 @@ const PartnersSection = () => {
       name: "火箭隊",
       imgSm: rocketSm,
       imgLg: rocketLg,
+      imgSmWidth: "80px",
+      imgLgWidth: "100px",
     },
     {
       role: "協辦單位",
       name: "六角學院",
       imgSm: hexschoolSm,
       imgLg: hexschoolLg,
+      imgSmWidth: "100px",
+      imgLgWidth: "120px",
     },
     {
       role: "協辦單位",
       name: "好想工作室",
       imgSm: gooideaSm,
       imgLg: gooideaLg,
+      imgSmWidth: "80px",
+      imgLgWidth: "100px",
     },
     {
       role: "合作招募廠商",
       name: "凱鈿科技",
       imgSm: kdanSm,
       imgLg: kdanLg,
+      imgSmWidth: "140px",
+      imgLgWidth: "160px",
     },
     {
       role: "合作招募廠商",
       name: "鈦坦科技",
       imgSm: titanSm,
       imgLg: titanLg,
+      imgSmWidth: "80px",
+      imgLgWidth: "100px",
     },
     {
       role: "合作招募廠商",
       name: "坂和企業",
       imgSm: skwSm,
       imgLg: skwLg,
+      imgSmWidth: "80px",
+      imgLgWidth: "100px",
     },
     {
       role: "合作招募廠商",
       name: "緯創資通",
       imgSm: wistronSm,
       imgLg: wistronLg,
+      imgSmWidth: "120px",
+      imgLgWidth: "150px",
     },
   ];
   return (
     // mobile
     <section>
-      <div className="lg:hidden bg-Neutral-200  px-[48px] py-[16px]">
-        <h3 className="mt-[-32px] mb-[16px] heading-3 leading-[1.5]">
+      <div className="lg:hidden bg-Neutral-200 text-Neutral-700 px-12 py-4">
+        <h3 className="-mt-8 mb-4 heading-3 leading-normal">
           主辦、協辦單位
         </h3>
-        <ul className="flex gap-x-[20px] overflow-x-scroll">
+        <ul className="flex gap-x-5 overflow-x-scroll">
           {data.map((d) => {
             return (
               <li className="">
-                <div className="img mb-[12px] w-[156px] h-[120px] py-[20px] px-[28px] rounded-[12px] bg-white flex justify-center items-center">
-                  <img className="object-cover w-full" src={d.imgSm} alt={d.name} />
+                <div className="img mb-3 w-39 h-30 rounded-[12px] bg-white flex justify-center items-center">
+                  <img
+                    className="object-cover max-h-20 "
+                    src={d.imgSm}
+                    alt={d.name}
+                    style={d.imgLgWidth ? { maxWidth: d.imgLgWidth } : ""}
+                  />
                 </div>
-                <div className="text-[14px] leading-[1.5] tracking-[0.28px] ">
-                  <h4 className="font-[700]">{d.role}</h4>
-                  <p className="font-[400]">{d.name}</p>
+                <div className="text-[14px] leading-normal tracking-[0.28px] ">
+                  <h4 className="font-bold">{d.role}</h4>
+                  <p className="font-normal">{d.name}</p>
                 </div>
               </li>
             );
@@ -83,20 +102,26 @@ const PartnersSection = () => {
         </ul>
       </div>
 
-      <div className="max-lg:hidden bg-Neutral-200  px-[48px] py-[16px]">
-          <h3 className="mt-[-32px] mb-[16px] heading-3 leading-[1.5]">
+      {/* desktop */}
+      <div className="max-lg:hidden bg-Neutral-200  text-Neutral-700 px-18 pb-4">
+        <h3 className="-mt-6 mb-8 heading-3 leading-normal">
           主辦、協辦單位
         </h3>
-        <ul className="flex gap-x-[20px] overflow-x-scroll">
+        <ul className="flex gap-x-5 overflow-x-scroll">
           {data.map((d) => {
             return (
               <li className="">
-                <div className="img mb-[12px] w-[156px] h-[120px] py-[20px] px-[28px] rounded-[12px] bg-white flex justify-center items-center">
-                  <img className="object-cover w-full" src={d.imgLg} alt={d.name} />
+                <div className="img mb-4 w-49 h-37 rounded-[12px] bg-white flex justify-center items-center">
+                  <img
+                    className="object-contain max-w-40 max-h-25"
+                    src={d.imgLg}
+                    alt={d.name}
+                    style={d.imgLgWidth ? { maxWidth: d.imgLgWidth } : ""}
+                  />
                 </div>
-                <div className="text-[14px] leading-[1.5] tracking-[0.28px] ">
-                  <h4 className="font-[700]">{d.role}</h4>
-                  <p className="font-[400]">{d.name}</p>
+                <div className="text-[16px] leading-normal tracking-[0.28px] ">
+                  <h4 className="font-bold mb-1">{d.role}</h4>
+                  <p className="font-normal">{d.name}</p>
                 </div>
               </li>
             );
