@@ -2,16 +2,17 @@ const SharedSpaceSection = () => {
   return (
     <section className="text-Neutral-700 bg-violet-200">
       <div className="md:hidden py-9 px-12 rounded-[24px]">
-        <h3 className="font-bold leading-normal tracking-[0.28px]">
-          About Us
-        </h3>
-        <h2 className="heading-1 mb-4">共同空間簡介</h2>
-        <p className="font-normal leading-normal tracking-[0.32px] mb-5">
-          共同空間有近 100 坪的空間，在開放式的公共區域中有
-          <span className="font-bold">休憩區以及舒適沙發討論區</span>
-          ，在設計上盡量讓空間規劃簡單俐落，沒有多餘的裝修，我們營運空間的理念很簡單，希望藉由這裡能與更多「人」締結關係，並凝聚更多熱愛分享程式的進駐培訓者，讓這裡打造實現開發能量的集聚地。
-        </p>
-
+        <div className="mb-5">
+          <h3 className="font-bold leading-normal tracking-[0.28px]">
+            About Us
+          </h3>
+          <h2 className="heading-1 mb-4">共同空間簡介</h2>
+          <p className="font-normal leading-normal tracking-[0.32px]">
+            共同空間有近 100 坪的空間，在開放式的公共區域中有
+            <span className="font-bold">休憩區以及舒適沙發討論區</span>
+            ，在設計上盡量讓空間規劃簡單俐落，沒有多餘的裝修，我們營運空間的理念很簡單，希望藉由這裡能與更多「人」締結關係，並凝聚更多熱愛分享程式的進駐培訓者，讓這裡打造實現開發能量的集聚地。
+          </p>
+        </div>
         {/* 地圖 */}
         <div className="flex justify-center h-83">
           <iframe
@@ -26,7 +27,6 @@ const SharedSpaceSection = () => {
           />
         </div>
       </div>
-
       {/* desktop */}
       <div className="max-md:hidden flex  max-xl:flex-wrap max-xl:flex-col-reverse justify-start max-xl:items-center gap-x-[96px] py-[60px] px-[72px] pr-[136px] rounded-[40px]">
         <div className="w-159 max-xl:w-full  shrink h-105">
