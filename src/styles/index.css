@@ -3,7 +3,7 @@
 @import "./common/_font.css";
 @import "./common/_radius.css";
 body {
-  font-family: var(--font-zh);
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -12,10 +12,13 @@ body {
 @theme {
   /* 跑馬燈動畫 */
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
   /* 跑馬燈速度 */
   --animate-marquee: marquee 20s linear infinite;
-
 }
