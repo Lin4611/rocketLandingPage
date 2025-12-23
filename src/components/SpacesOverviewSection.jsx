@@ -80,12 +80,9 @@ const getSpaceImgsUrl = (name) => {
   ).href;
 };
 
-// const getIconsUrl = (name) => {
-//     return new URL(
-//         `../assets/imgs/icon/ic-${name}-lg.svg`,
-//         import.meta.url
-//     ).href;
-// }
+const getIconsUrl = (name) => {
+  return new URL(`../assets/imgs/icon/ic-${name}-lg.svg`, import.meta.url).href;
+};
 
 const SpacesOverviewSection = () => {
   return (
@@ -103,7 +100,11 @@ const SpacesOverviewSection = () => {
             (space) => (
               <div key={space.id} className="flex flex-col gap-4">
                 <div className="w-full">
-                  <img src={getSpaceImgsUrl(space.name)} alt={space.title} className="w-full h-auto object-contain" />
+                  <img
+                    src={getSpaceImgsUrl(space.name)}
+                    alt={space.title}
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
                 <div className="flex flex-col gap-2">
                   <p className="body-1 text-Neutral-700 font-bold">
@@ -130,7 +131,26 @@ const SpacesOverviewSection = () => {
           )}
         </div>
         {/* 服務區塊 */}
-        <div></div>
+        <div className="w-full flex justify-start mt-8 mb-7">
+          <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
+            #服務
+          </h4>
+        </div>
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+          {SpacesInfo.filter((item) => item.category === "服務").map(
+            (service) => (
+              <div key={service.id} className="flex gap-4">
+                <div className="w-12">
+                  <img src={getIconsUrl(service.name)} alt={service.title} className="w-full aspect-square"/>
+                </div>
+                <div className="flex flex-col w-67 gap-1">
+                  <p className="text-Neutral-700 font-bold">{service.title}</p>
+                  <p className="text-Neutral-600 text-[14px]">{service.discription}</p>
+                </div>
+              </div>
+            )
+          )}
+        </div>
 
         {/* 照片輪播區 */}
         <div></div>
