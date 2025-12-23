@@ -1,3 +1,9 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay} from "swiper/modules";
+
+import "swiper/css";
+
+
 const SpacesInfo = [
   {
     id: 1,
@@ -76,7 +82,15 @@ const SpacesInfo = [
   },
 ];
 
-const getSpaceImgsUrl = (name,size) => {
+const carouselPhotoList = Array.from({ length: 8 }, (_, index) => ({
+  id: index + 1,
+  url: new URL(
+    `../assets/imgs/carousel/carousel${index + 1}-lg.png`,
+    import.meta.url
+  ).href,
+}));
+
+const getSpaceImgsUrl = (name, size) => {
   return new URL(
     `../assets/imgs/intro/intro-${name}-${size}-3x.png`,
     import.meta.url
@@ -84,22 +98,21 @@ const getSpaceImgsUrl = (name,size) => {
 };
 
 const getIconsUrl = (name) => {
-  return new URL(`../assets/imgs/icon/ic-${name}-lg.svg`, import.meta.url)
-    .href;
+  return new URL(`../assets/imgs/icon/ic-${name}-lg.svg`, import.meta.url).href;
 };
 
 const SpacesOverviewSection = () => {
   return (
     <>
-      <section className="flex flex-col gap-4 items-center pt-12 w-full max-w-269 mx-auto px-12 xl:px-0">
+      <section className="flex flex-col gap-4 items-center pt-12 w-full max-w-269 mx-auto lg:pb-20">
         <h2 className="heading-2 text-Neutral-700">場域說明</h2>
         {/* 硬體區塊 */}
-        <div className="w-full flex justify-start h-7.5 mb-6">
+        <div className="w-full flex justify-start h-7.5 mb-6 px-12 lg:px-0">
           <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
             #硬體
           </h4>
         </div>
-        <div className="w-full grid grid-cols-1 gap-10 ">
+        <div className="w-full grid grid-cols-1 gap-10 px-12 lg:px-0">
           {SpacesInfo.filter((item) => item.category === "硬體").map(
             (space, index) => (
               <div
@@ -115,7 +128,7 @@ const SpacesOverviewSection = () => {
                       media="(min-width:1024px)"
                     />
                     <img
-                      src={getSpaceImgsUrl(space.name,"sm")}
+                      src={getSpaceImgsUrl(space.name, "sm")}
                       alt={space.title}
                       className="w-full h-auto object-contain"
                     />
@@ -146,12 +159,12 @@ const SpacesOverviewSection = () => {
           )}
         </div>
         {/* 服務區塊 */}
-        <div className="w-full max-w-269 flex justify-start mt-8 mb-7">
+        <div className="w-full max-w-269 flex justify-start mt-8 mb-7 px-12 lg:px-0">
           <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
             #服務
           </h4>
         </div>
-        <div className="w-full grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
+        <div className="w-full grid grid-cols-1 gap-7 px-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 lg:px-0">
           {SpacesInfo.filter((item) => item.category === "服務").map(
             (service) => (
               <div
@@ -177,10 +190,32 @@ const SpacesOverviewSection = () => {
             )
           )}
         </div>
-
-        {/* 照片輪播區 */}
-        <div></div>
       </section>
+      {/* 照片輪播區 */}
+        <div className="w-full pt-10 pl-12 pb-20 lg:px-0 ">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={24}
+            slidesPerView={1.15}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true}}
+            allowTouchMove={true}
+            breakpoints={{
+              768: { slidesPerView: 1.2 },
+              1024: { slidesPerView: 2.2, centeredSlides: true },
+            }}
+            className="w-full h-full cursor-grab active:cursor-grabbing"
+          >
+            {carouselPhotoList.map((photo) => (
+              <SwiperSlide key={photo.id}>
+                <div className="w-full aspect-[1.5/1] overflow-hidden r-sm">
+                  <img src={photo.url} alt={`空間實景照${photo.id}`} className="h-full w-full object-cover"/>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+       
     </>
   );
 };
