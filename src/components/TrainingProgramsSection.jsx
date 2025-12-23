@@ -399,13 +399,13 @@ const TrainingProgramsSection = () => {
               {coachInfo[currentCoachIdex].experience.map((item, index) => (
                 <li key={index} className="flex gap-1 items-start">
                   <span className="text-2xl">・</span>
-                  <p>{item}</p>
+                  <p className="self-center">{item}</p>
                 </li>
               ))}
             </ul>
           </div>
         </section>
-        <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5">
+        <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5 cursor-pointer lg:w-full lg:max-w-269">
           <a href="https://register.rocket-coding.com/" target="_blank" className="flex item-center gap-1">
             <p className="heading-3! text-Neutral-700 self-center">馬上報名！</p>
             <img src={goIcon} alt="goIcon" className="hidden group-hover:block group-hover:transition-all group-hover:duration-1000"/>
