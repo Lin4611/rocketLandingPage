@@ -124,13 +124,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col px-12 gap-8 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於前端
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       主要專精 JavaScript 前端 (65%)、後端 (35%)
                     </span>
                     <span className="block lg:inline">
@@ -149,7 +149,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="min-w-3 text-center">1.</p>
                       <p>
                         <span className="lg:whitespace-nowrap">
                           會用 CSS Flexbox 排過網頁，有 RWD
@@ -179,7 +179,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="min-w-3 text-center">1.</p>
                       <p>
                         網頁切版技能：HTML5、CSS3、SCSS、Bootsrap5、TailwindCSS
                       </p>
@@ -200,7 +200,7 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>4.</p>
                       <p>
-                        <span className="whitespace-nowrap">
+                        <span className="min-[428px]:whitespace-nowrap">
                           JS 框架：React(Hooks)、Vue3，會依照未
                         </span>
                         來你想投入的公司進行調整
@@ -209,7 +209,7 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>5.</p>
                       <p>
-                        <span className="whitespace-nowrap">
+                        <span className="min-[428px]:whitespace-nowrap">
                           程式版控：Git、GitHub、Git Flow 工作流
                         </span>
                         程
@@ -245,13 +245,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於後端
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       後端工程師組主要專注為後端開發，投入後端
                     </span>
                     語言為 C#、.Net，
@@ -268,7 +268,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="w-3 text-center">1.</p>
                       <p>後端語言：C#</p>
                     </div>
                     <div className="flex gap-1">
@@ -309,13 +309,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於設計
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       主要以網頁 UI 設計 50%、網頁前端 50% 的雙
                     </span>
                     技能樹養成，
@@ -332,7 +332,7 @@ const TrainingProgramsSection = () => {
                   </p>
                   <div className="font-en pl-3">
                     <div className="flex gap-1">
-                      <p>1.</p>
+                      <p className="w-3 text-center">1.</p>
                       <p>
                         <span className="block whitespace-nowrap lg:inline">
                           網頁前置規劃：Logic Flow、
@@ -399,16 +399,20 @@ const TrainingProgramsSection = () => {
               {coachInfo[currentCoachIdex].experience.map((item, index) => (
                 <li key={index} className="flex gap-1 items-start">
                   <span className="text-2xl">・</span>
-                  <p>{item}</p>
+                  <p className="self-center">{item}</p>
                 </li>
               ))}
             </ul>
           </div>
         </section>
-        <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5">
+        <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex justify-center items-center -mb-11.5 cursor-pointer lg:w-full lg:max-w-269">
           <a href="https://register.rocket-coding.com/" target="_blank" className="flex item-center gap-1">
-            <p className="heading-3! text-Neutral-700 self-center">馬上報名！</p>
-            <img src={goIcon} alt="goIcon" className="hidden group-hover:block group-hover:transition-all group-hover:duration-1000"/>
+            <div className="heading-3! h-10 flex justify-center items-center text-Neutral-700 transition-transform duration-300 group-hover:-translate-x-1 lg:h-12">
+              <p>馬上報名！</p></div>
+            <div className="h-full w-0 scale-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-12">
+              <img src={goIcon} alt="goIcon" className="w-full h-auto"/>
+            </div>
+            
           </a>
         </div>
       </section>
