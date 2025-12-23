@@ -124,13 +124,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col px-12 gap-8 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於前端
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       主要專精 JavaScript 前端 (65%)、後端 (35%)
                     </span>
                     <span className="block lg:inline">
@@ -200,7 +200,7 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>4.</p>
                       <p>
-                        <span className="whitespace-nowrap">
+                        <span className="min-[428px]:whitespace-nowrap">
                           JS 框架：React(Hooks)、Vue3，會依照未
                         </span>
                         來你想投入的公司進行調整
@@ -209,7 +209,7 @@ const TrainingProgramsSection = () => {
                     <div className="flex gap-1">
                       <p>5.</p>
                       <p>
-                        <span className="whitespace-nowrap">
+                        <span className="min-[428px]:whitespace-nowrap">
                           程式版控：Git、GitHub、Git Flow 工作流
                         </span>
                         程
@@ -245,13 +245,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於後端
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       後端工程師組主要專注為後端開發，投入後端
                     </span>
                     語言為 C#、.Net，
@@ -309,13 +309,13 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於設計
                   </p>
                   <p className="font-en">
-                    <span className="whitespace-nowrap">
+                    <span className="min-[428px]:whitespace-nowrap">
                       主要以網頁 UI 設計 50%、網頁前端 50% 的雙
                     </span>
                     技能樹養成，
