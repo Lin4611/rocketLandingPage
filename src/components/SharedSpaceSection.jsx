@@ -1,6 +1,6 @@
 const SharedSpaceSection = () => {
   return (
-    <section className="text-Neutral-700 bg-violet-200">
+    <section className="text-Neutral-700 bg-Primary-Violet-200">
       <div className="md:hidden py-9 px-12 rounded-[24px]">
         <div className="mb-5">
           <h3 className="font-bold leading-normal tracking-[0.28px]">
@@ -14,9 +14,9 @@ const SharedSpaceSection = () => {
           </p>
         </div>
         {/* 地圖 */}
-        <div className="flex justify-center h-83">
+        <div className="flex p-[12px] bg-white rounded-[8px] justify-center h-83">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.232812259288!2d120.30793527536764!3d22.628019879452346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0491b7febacd%3A0x24542bac2726199b!2z5a-25oiQ5LiW57SA5aSn5qiT!5e1!3m2!1szh-TW!2stw!4v1766476737037!5m2!1szh-TW!2stw"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.232812259288!2d120.30793527536764!3d22.628019879452346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0491b7febacd%3A0x24542bac2726199b!2z5a-25oiQ5LiW57SA5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1766476737037!5m2!1szh-TW!2stw"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -28,10 +28,10 @@ const SharedSpaceSection = () => {
         </div>
       </div>
       {/* desktop */}
-      <div className="max-md:hidden flex  max-xl:flex-wrap max-xl:flex-col-reverse justify-start max-xl:items-center gap-x-[96px] py-[60px] px-[72px] pr-[136px] rounded-[40px]">
-        <div className="w-159 max-xl:w-full  shrink h-105">
+      <div className="max-md:hidden flex  max-xl:flex-wrap max-xl:flex-col-reverse justify-center items-center max-xl:items-center gap-x-[96px] py-[60px] px-[72px]  rounded-[40px]">
+        <div className="w-159 p-[12px] bg-white rounded-[16px] max-xl:w-full  shrink h-105">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.232812259288!2d120.30793527536764!3d22.628019879452346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0491b7febacd%3A0x24542bac2726199b!2z5a-25oiQ5LiW57SA5aSn5qiT!5e1!3m2!1szh-TW!2stw!4v1766476737037!5m2!1szh-TW!2stw"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.232812259288!2d120.30793527536764!3d22.628019879452346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0491b7febacd%3A0x24542bac2726199b!2z5a-25oiQ5LiW57SA5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1766476737037!5m2!1szh-TW!2stw"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -42,7 +42,9 @@ const SharedSpaceSection = () => {
           />
         </div>
 
-        <div className="w-125 max-xl:w-full shrink-0">
+        
+
+        <div className="w-125 max-xl:w-full shrink-0 xl:mr-[64px]">
           <h3 className="text-[20px] font-bold leading-normal tracking-[0.4px]">
             About Us
           </h3>
