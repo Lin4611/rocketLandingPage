@@ -1,12 +1,14 @@
 import Header from "../src/components/Header";
 import HomePage from "../src/pages/HomePage";
+import CoworkingSpacePage from "./pages/CoworkingSpacePage";
 import Footer from "../src/components/Footer";
 function App() {
   return (
     <>
-    <Header/>
-    <HomePage/>
-    <Footer/>
+      <Header />
+      <HomePage/>
+      {/* <CoworkingSpacePage /> */}
+      <Footer />
     </>
   );
 }
