@@ -1,13 +1,11 @@
 import Header from "../src/components/Header";
-import HomePage from "../src/pages/HomePage";
-import CoworkingSpacePage from "./pages/CoworkingSpacePage";
+import WebRouter from "./router/WebRouter";
 import Footer from "../src/components/Footer";
 function App() {
   return (
     <>
       <Header />
-      <HomePage/>
-      {/* <CoworkingSpacePage /> */}
+      <WebRouter />
       <Footer />
     </>
   );
