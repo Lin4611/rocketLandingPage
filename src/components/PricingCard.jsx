@@ -1,11 +1,15 @@
 import check from "../assets/imgs/icon/ic-check-lg.svg";
-const PricingCard = ({ title, price, features }) => {
+const PricingCard = ({ title, price, features, isActive, onClick }) => {
   return (
     <div
+      onClick={onClick}
       className={`
         w-full p-8 flex flex-col gap-4 items-center justify-center r-md
         bg-Neutral-white text-Neutral-700 transition-all duration-300
-        md:px-20 lg:px-20
+        md:px-20 lg:px-20 border-2 
+        ${isActive ? "border-Neutral-700 lg:border-transparent" : "border-transparent"}
+        lg:hover:border-Neutral-700
+        lg:cursor-pointer
       `}
     >
       <h4 className="text-2xl font-bold whitespace-nowrap lg:body-1">

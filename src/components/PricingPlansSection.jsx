@@ -1,10 +1,11 @@
 import PricingCard from "./PricingCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
+import { useState } from "react";
 const PricingPlansSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="w-full bg-Primary-Violet-200 flex justify-center">
       <div className="w-full max-w-293 flex flex-col px-12 pb-12 pt-27.5">
@@ -31,14 +32,15 @@ const PricingPlansSection = () => {
               slidesPerView: 1.5,
               spaceBetween: 24,
             },
-            850:{
+            850: {
               slidesPerView: 1.8,
               spaceBetween: 24,
             },
             1024: {
               slidesPerView: 2,
               spaceBetween: 24,
-            },1440: {
+            },
+            1440: {
               slidesPerView: 2,
               spaceBetween: 24,
               enabled: false,
@@ -49,6 +51,8 @@ const PricingPlansSection = () => {
             <PricingCard
               title="進駐者"
               price="$ 3,200 / Month"
+              isActive={activeIndex === 0} 
+              onClick={() => setActiveIndex(0)}
               features={[
                 { text: "進駐區域", highlight: true },
                 { text: "9:00-18:00 可使用" },
@@ -64,6 +68,8 @@ const PricingPlansSection = () => {
             <PricingCard
               title="單日使用（暫不提供）"
               price="$ 300 / Day"
+              isActive={activeIndex === 1} 
+              onClick={() => setActiveIndex(1)}
               features={[
                 { text: "培訓區域" },
                 { text: "9:00-18:00 可使用" },
@@ -76,16 +82,15 @@ const PricingPlansSection = () => {
             />
           </SwiperSlide>
         </Swiper>
-        <div className="w-full flex justify-center items-center bg-Primary-Violet-200 border-2 border-Neutral-700 r-md mt-8 py-4 lg:py-6">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScEUjtPalxIGn0dVgO_1VLFxuq7is_0VUYROiGzktwze5QARw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="heading-3 text-Neutral-700"
-          >
-            馬上填表單!
-          </a>
-        </div>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScEUjtPalxIGn0dVgO_1VLFxuq7is_0VUYROiGzktwze5QARw/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex justify-center items-center bg-Primary-Violet-200 border-2 border-Neutral-700 r-md mt-8 py-4 lg:py-6"
+        >
+          <span className="heading-3 text-Neutral-700">馬上填表單!</span>
+        </a>
       </div>
     </section>
   );
