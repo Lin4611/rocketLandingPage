@@ -3,14 +3,19 @@ const PricingCard = ({ title, price, features }) => {
   return (
     <div
       className={`
-        max-w-83.25 p-8 flex flex-col gap-4 items-center justify-center r-md
+        w-full p-8 flex flex-col gap-4 items-center justify-center r-md
         bg-Neutral-white text-Neutral-700 transition-all duration-300
+        md:px-20 lg:px-20
       `}
     >
-      <h4 className="heading-3 whitespace-nowrap">{title}</h4>
+      <h4 className="text-2xl font-bold whitespace-nowrap lg:body-1">
+        {title}
+      </h4>
 
-      <div className="w-full py-5 px-10 bg-Neutral-200 flex justify-center">
-        <p className="text-2xl font-en whitespace-nowrap">{price}</p>
+      <div className="w-full py-5 px-10 bg-Neutral-200 flex justify-center max-w-91.25 lg:p-10">
+        <p className="text-2xl font-en whitespace-nowrap lg:text-4xl">
+          {price}
+        </p>
       </div>
 
       <div className="w-full flex flex-col gap-3">
