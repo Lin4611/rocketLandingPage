@@ -3,7 +3,7 @@ const PricingCard = ({ title, price, features }) => {
   return (
     <div
       className={`
-        max-w-83.25 p-8 flex flex-col gap-4 items-center r-md
+        max-w-83.25 p-8 flex flex-col gap-4 items-center justify-center r-md
         bg-Neutral-white text-Neutral-700 transition-all duration-300
       `}
     >
