@@ -7,7 +7,7 @@ const SuccessCasesSection = () => {
 
   return (
     <>
-      <section className="w-full overflow-hidden mb-24 xl:max-w-360 xl:mx-auto lg:px-12 xl:mb-30 ">
+      <section className="w-full pt-12 overflow-hidden mb-24 xl:max-w-360 xl:mx-auto lg:px-12 xl:mb-30 ">
         <h2 className="heading-2! text-center mb-4 text-Neutral-700 xl:text-4xl! xl:mb-7">
           成功案例
         </h2>
