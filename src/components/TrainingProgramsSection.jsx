@@ -15,10 +15,10 @@ const coachInfo = [
     name: "廖洧杰",
     title: "JS 組教練",
     experience: [
-      "2016-2022 過往經歷：六角學院校長、高雄火箭隊前端教練",
+      <>2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" className="hover:text-Neutral-500">六角學院校長</a>、<a href="https://www.facebook.com/people/%E7%81%AB%E7%AE%AD%E9%9A%8A%E5%9F%B9%E8%A8%93%E7%87%9F/100039975056467/#" target="_blank" className="hover:text-Neutral-500">高雄火箭隊</a>前端教練</>,
       "2013-2019 成功案例：協助無資訊背景轉職工程師人數超過 500 位",
       "2013-2019 授課人數：線上+線下授課學員超過 25,000 位",
-      "2014-2019 線下授課：高雄大學前端領域兼任講師",
+      <>2014-2019 線下授課：<a href="https://im.nuk.edu.tw/p/426-1038-7.php?Lang=zh-tw" target="_blank" className="hover:text-Neutral-500">高雄大學前端領域兼任講師</a></>,
       "2007-2019 實務經驗：經手超過 100 個實際專案，其領域不乏中小企業、政府專案、銀行系統",
     ],
   },
@@ -61,8 +61,8 @@ const coachInfo = [
     name: "卡斯伯",
     title: "UI 教練",
     experience: [
-      "2016-2022 過往經歷：六角學院共同創辦人",
-      "2016-2022 近期授課經驗：Vue 3 直播班講師、從 Figma 到 VSCode，設計做到網頁切版",
+      <>2016-2022 過往經歷：<a href="https://www.hexschool.com/" target="_blank" className="hover:text-Neutral-500">六角學院</a>共同創辦人</>,
+      <>2016-2022 近期授課經驗：<a href="https://www.hexschool.com/courses/vue-training.html" target="_blank" className="hover:text-Neutral-500">Vue 3 直播班講師</a>、<a href="https://www.youtube.com/watch?v=qRZLtIcPdls&list=RDCMUC-b2nGm0xLzic38Byti0VjA&start_radio=1" target="_blank" className="hover:text-Neutral-500">從 Figma 到 VSCode，設計做到網頁切版</a></>,
       "2013-2016 實務經驗：鴻海軟體工程師，設計師轉職前端工程師，擅長將複雜觀念用圖形化方式呈現",
       "六屆 IT 鐵人邦獲選紀錄（含五屆優選）",
       "線上課程超過萬人註冊，技術 Blog - 卡斯伯前端",
@@ -273,7 +273,7 @@ const TrainingProgramsSection = () => {
                     </div>
                     <div className="flex gap-1">
                       <p>2.</p>
-                      <p>程式架構：ASP.NET Web Form、ASP.NET MVC、Web API</p>
+                      <p>程式架構：<span className="border-b"><a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">ASP.NET</a></span> Web Form、<span className="border-b"><a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">ASP.NET</a></span> MVC、Web API</p>
                     </div>
                     <div className="flex gap-1">
                       <p>3.</p>
