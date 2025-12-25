@@ -12,7 +12,7 @@ import coworkin_card_btn_lg from "../assets/imgs/icon/banner-btn-coworking-lg.sv
 import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
 import { useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const banner_bg = `bg-[url('../assets/imgs/bg/banner-bg.png')]`;
 const bannerTextList = [
   {
@@ -69,8 +69,12 @@ const bannerTextListLg = [
   },
 ];
 const Header = () => {
-  const [isSelected, setIsSelected] = useState("火箭隊");
+  
   const [hoveredItem, setHoveredItem] = useState(null);
+  const location = useLocation();
+  const allItems = [...bannerTextList, ...bannerTextListLg];
+  const matchItem = allItems.find((item) => item.link_path === location.pathname);
+  const isSelected = matchItem ? matchItem.title : "火箭隊";
   return (
     <header className="w-full flex flex-col items-center justify-center">
       <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 transform-all duration-300 md:hidden lg:hidden">
@@ -84,9 +88,6 @@ const Header = () => {
               to={item.link_path}
               className="w-full relative max-w-100 flex items-center z-5"
               key={item.id}
-              onClick={() => {
-                setIsSelected(item.title);
-              }}
             >
               {!isActive && (
                 <div className="absolute inset-0 bg-white/60 z-20" />
@@ -147,9 +148,6 @@ const Header = () => {
                 className={`w-full max-w-110 flex items-center z-5 relative cursor-pointer transform-all duration-300 ${
                   isSelected !== item.title ? "hover:-mt-4" : ""
                 }`}
-                onClick={() => {
-                  setIsSelected(item.title);
-                }}
                 onMouseEnter={() => setHoveredItem(item.title)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
