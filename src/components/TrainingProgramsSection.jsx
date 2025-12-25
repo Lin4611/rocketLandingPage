@@ -178,9 +178,9 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="w-full flex flex-col px-12 gap-8 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col px-12 gap-9 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     關於前端
                   </p>
                   <p className="font-en">
@@ -439,13 +439,13 @@ const TrainingProgramsSection = () => {
         </div>
 
         <section className="w-full pt-10 overflow-hidden xl:max-w-269 xl:mx-auto">
-          <div className="heading-3! text-Neutral-700 font-bold flex w-full px-12.25 xl:max-w-296">
+          <div className="heading-3 text-Neutral-700 font-bold flex w-full px-12.25 xl:px-0 xl:max-w-296">
             <p>教練團</p>
           </div>
           {/* 輪播卡片區 */}
-          <div className="pt-13">
+          <div>
             <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 xl:overflow-visible xl:scroll-pl-0">
-              <div className="flex gap-7 px-12.25 w-max pt-10 pb-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6">
+              <div className="flex gap-7 px-12.25 w-max pt-10 pb-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6 xl:pb-7">
                 {/* 圖片區 */}
 
                 {coachInfo.map((coach, index) => (
@@ -471,8 +471,8 @@ const TrainingProgramsSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-12.25 pt-10 pb-20 xl:max-w-296">
-            <h4 className="body-1! font-bold text-Neutral-700 mb-2">
+          <div className="w-full px-12.25 pb-20 xl:px-0 xl:max-w-296">
+            <h4 className="body-1 font-bold text-Neutral-700 mb-2">
               {coachInfo[currentCoachIdex].title} |{" "}
               {coachInfo[currentCoachIdex].name}
             </h4>
@@ -488,7 +488,7 @@ const TrainingProgramsSection = () => {
         </section>
         <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex gap-5 justify-center items-center -mb-11.5 cursor-pointer lg:w-full lg:max-w-233 lg:h-24 xl:max-w-269">
           <a
-            href="[https://register.rocket-coding.com/](https://register.rocket-coding.com/)"
+            href="https://register.rocket-coding.com/"
             target="_blank"
             className="flex justify-center item-center h-full"
           >
