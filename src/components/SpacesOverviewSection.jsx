@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay} from "swiper/modules";
+import { Autoplay ,Mousewheel} from "swiper/modules";
 
 import "swiper/css";
 
@@ -193,12 +193,13 @@ const SpacesOverviewSection = () => {
       {/* 照片輪播區 */}
         <div className="w-full max-w-360 pt-10 pl-12 pb-12 lg:px-0 lg:mx-auto xl:py-20 ">
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, Mousewheel]}
             spaceBetween={24}
             slidesPerView={1.15}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true}}
             allowTouchMove={true}
+            mousewheel={{forceToAxis:true}}
             breakpoints={{
               768: { slidesPerView: 1.2 },
               1024: { slidesPerView: 2.2, centeredSlides: true },
