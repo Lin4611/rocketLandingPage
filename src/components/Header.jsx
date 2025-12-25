@@ -12,19 +12,7 @@ import coworkin_card_btn_lg from "../assets/imgs/icon/banner-btn-coworking-lg.sv
 import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
 import { useState } from "react";
 import React from "react";
-import MarqueeContent from "./MarqueeContent";
 import { Link } from "react-router-dom";
-const marqueeItems = [
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-];
 const banner_bg = `bg-[url('../assets/imgs/bg/banner-bg.png')]`;
 const bannerTextList = [
   {
@@ -80,16 +68,11 @@ const bannerTextListLg = [
     link_path:'/coworkingSpace'
   },
 ];
-
 const Header = () => {
   const [isSelected, setIsSelected] = useState("火箭隊");
   const [hoveredItem, setHoveredItem] = useState(null);
   return (
     <header className="w-full flex flex-col items-center justify-center">
-      <div className="sticky top-0 right-0 z-50 flex w-full overflow-hidden bg-Neutral-white backdrop-blur py-5 shadow-sm">
-        <MarqueeContent items={marqueeItems} />
-        <MarqueeContent items={marqueeItems} />
-      </div>
       <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 transform-all duration-300 md:hidden lg:hidden">
         <div
           className={`${banner_bg} absolute inset-0 bg-repeat opacity-50 z-0`}
