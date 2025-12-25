@@ -190,10 +190,11 @@ const TrainingProgramsSection = () => {
                     <span className="block lg:inline">
                       開發，投入語言為HTML、CSS、
                     </span>
-                    JavaScript，
+                    <span className="min-[428px]:whitespace-nowrap">JavaScript，
                     <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
-                      適合有一些 HTML、CSS、JS 基礎的學員報名
+                      適合有一些 HTML、CSS、JS 基</span>
                     </span>
+                    <span className="box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">礎的學員報名</span>
                     。
                   </p>
                 </section>
@@ -201,13 +202,15 @@ const TrainingProgramsSection = () => {
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     應徵門檻
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="min-w-3 text-center">1.</p>
                       <p>
                         <span className="lg:whitespace-nowrap">
-                          會用 CSS Flexbox 排過網頁，有 RWD
-                          響應式網頁概念，需提交 CSS 切版作品，
+                          <span className="min-[428px]:whitespace-nowrap">
+                            會用 CSS Flexbox 排過網頁，有 RWD 響
+                          </span>
+                          應式網頁概念，需提交 CSS 切版作品，
                           <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold lg:font-medium lg:bg-none">
                             請
                           </span>
@@ -231,7 +234,7 @@ const TrainingProgramsSection = () => {
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="min-w-3 text-center">1.</p>
                       <p>
@@ -320,7 +323,7 @@ const TrainingProgramsSection = () => {
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="w-3 text-center">1.</p>
                       <p>後端語言：C#</p>
@@ -404,7 +407,7 @@ const TrainingProgramsSection = () => {
                   <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="w-3 text-center">1.</p>
                       <p>
@@ -488,9 +491,7 @@ const TrainingProgramsSection = () => {
             <div className="heading-3! w-full h-full flex justify-center items-center text-Neutral-700 transition-transform duration-500 ease-in-out">
               <p>馬上報名！</p>
             </div>
-            <div
-              className="w-0 h-full aspect-square scale-0 opacity-0 transition-all origin-center duration-500 ease-in-out group-hover:w-12 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-16 group-hover:ml-5"
-            >
+            <div className="w-0 h-full aspect-square scale-0 opacity-0 transition-all origin-center duration-500 ease-in-out group-hover:w-12 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-16 group-hover:ml-5">
               <img
                 src={goIcon}
                 alt="goIcon"
