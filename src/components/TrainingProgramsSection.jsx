@@ -133,7 +133,7 @@ const TrainingProgramsSection = () => {
   const [currentCoachIdex, setCurrentIndex] = useState(0);
   return (
     <>
-      <section className="flex flex-col items-center bg-Neutral-100">
+      <section className="flex flex-col items-center bg-Neutral-100 md:px-5 xl:px-0">
         <h2 className="heading-2! text-Neutral-700 text-center -mt-5 mb-2 lg:text-4xl! lg:mb-3">
           關於培訓
         </h2>
@@ -154,7 +154,7 @@ const TrainingProgramsSection = () => {
           </div>
         </div>
         {/* 組別卡片區 */}
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -278,7 +278,7 @@ const TrainingProgramsSection = () => {
             </div>
           </section>
         </div>
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -362,7 +362,7 @@ const TrainingProgramsSection = () => {
             </div>
           </section>
         </div>
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
