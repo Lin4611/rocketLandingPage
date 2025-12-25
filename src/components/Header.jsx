@@ -132,7 +132,7 @@ const Header = () => {
                     {item.title}
                   </h1>
                 </div>
-                <h2 className="heading-4 font-en text-Neutral-500 pl-1">
+                <h2 className="heading-4 font-en text-Neutral-500 pl-1 font-bold">
                   {item.en_title}
                 </h2>
               </div>
@@ -188,18 +188,18 @@ const Header = () => {
                     <div className="absolute inset-0 bg-white/60 z-20 pointer-events-none rounded-[inherit]" />
                   )}
                   <div
-                    className={`flex flex-col items-center justify-center -mt-9 relative z-30 ${
+                    className={`w-full max-w-52.75 flex flex-col items-center justify-center -mt-7  lg:-mt-9 relative z-30 ${
                       !isActive ? "opacity-60" : ""
                     }`}
                   >
-                    <h1 className="heading-1 text-Neutral-700 md:text-[32px]">
+                    <h1 className="text-[36px] text-Neutral-700 lg:text-[48px] font-bold">
                       {item.title}
                     </h1>
-                    <h2 className="font-en text-neutral-500 text-xl font-bold ">
+                    <h2 className="font-en text-neutral-500 text-2xl font-bold">
                       {item.subTitle}
                     </h2>
                   </div>
-                  <div className="flex flex-col items-center justify-center gap-4">
+                  <div className="flex flex-col items-center justify-center gap-4 max-w-66">
                     <img
                       src={item.img}
                       alt={item.title}
@@ -208,7 +208,7 @@ const Header = () => {
                     <div className="flex flex-col justify-center items-center">
                       {item.desc.map((text) => (
                         <span
-                          className="text-xl font-bold leading-[1.75] text-neutral-700 md:text-[16px]"
+                          className="text-[16px] font-bold leading-[1.75] text-neutral-700 lg:text-xl"
                           key={text}
                         >
                           {text}
