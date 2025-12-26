@@ -5,10 +5,10 @@ import Marquee from "./components/Marquee";
 function App() {
   return (
     <>
+    <Marquee />
     <Header />
     <WebRouter />
     <Footer />
-    <Marquee />
     </>
   );
 }
