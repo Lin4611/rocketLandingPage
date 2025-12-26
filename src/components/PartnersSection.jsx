@@ -74,13 +74,11 @@ const PartnersSection = () => {
     },
   ];
   return (
-    // mobile
-    <section>
-      <div className="lg:hidden bg-Neutral-200 text-Neutral-700 px-12 py-4">
-        <h3 className="-mt-8 mb-4 heading-3 leading-normal">
-          主辦、協辦單位
-        </h3>
-        <ul className="flex gap-x-5 overflow-x-scroll">
+    <section className="bg-Neutral-200 ">
+      {/* mobile */}
+      <div className="lg:hidden   text-Neutral-700 pl-12 py-4">
+        <h3 className="-mt-8 mb-4 heading-3 leading-normal">主辦、協辦單位</h3>
+        <ul className="flex  gap-x-5 overflow-x-scroll">
           {data.map((d) => {
             return (
               <li className="">
@@ -101,13 +99,12 @@ const PartnersSection = () => {
           })}
         </ul>
       </div>
-
       {/* desktop */}
-      <div className="max-lg:hidden bg-Neutral-200  text-Neutral-700 px-18 pb-4">
-        <h3 className="-mt-6 mb-8 heading-3 leading-normal">
+      <div className="max-lg:hidden text-Neutral-700 max-w-[1512px] mx-auto pl-18 pb-4">
+        <h3 className="relative top-[-20px] mb-[12px] heading-3 leading-normal">
           主辦、協辦單位
         </h3>
-        <ul className="flex gap-x-5 overflow-x-scroll">
+        <ul className="flex max-w[1368px] gap-x-6 overflow-x-scroll">
           {data.map((d) => {
             return (
               <li className="">
