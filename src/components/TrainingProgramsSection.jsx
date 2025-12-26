@@ -166,7 +166,7 @@ const TrainingProgramsSection = () => {
           <section>
             {/* 內容 */}
             <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-244.5 lg:justify-between lg:gap-12 lg:pt-16 lg:pb-10">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10 lg:pt-4">
                 <span>前端工程師</span>
               </h3>
               {/* 圖片 */}
@@ -180,7 +180,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col px-12 gap-9 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於前端
                   </p>
                   <p className="font-en">
@@ -203,7 +203,7 @@ const TrainingProgramsSection = () => {
                   </p>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     應徵門檻
                   </p>
                   <div className="font-en pl-2">
@@ -235,7 +235,7 @@ const TrainingProgramsSection = () => {
                   </div>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -294,7 +294,7 @@ const TrainingProgramsSection = () => {
           <section>
             {/* 內容 */}
             <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row lg: max-w-244.5 lg:justify-between lg:gap-15 lg:pt-16 lg:pb-10">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10 lg:pt-4">
                 <span>後端工程師</span>
               </h3>
               {/* 圖片 */}
@@ -308,7 +308,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className=" flex flex-col gap-8 px-12 lg:px-0 lg:max-w-152.75">
                 <section className="text-Neutral-700 ">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於後端
                   </p>
                   <p className="font-en">
@@ -324,7 +324,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -378,7 +378,7 @@ const TrainingProgramsSection = () => {
           <section>
             {/* 內容 */}
             <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-244.5 lg:justify-between lg:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap flex justify-center lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap flex justify-center lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10 lg:pt-4">
                 <span>UI 設計師</span>
               </h3>
               {/* 圖片 */}
@@ -392,7 +392,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於設計
                   </p>
                   <p className="font-en">
@@ -408,7 +408,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
