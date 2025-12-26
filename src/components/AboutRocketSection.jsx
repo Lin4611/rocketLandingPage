@@ -87,7 +87,7 @@ const AboutRocketSection = () => {
             About Rocket
           </h3>
           <h2 className="heading-1 mb-10">什麼是火箭隊</h2>
-          <div className="mb-6 flex flex-col gap-y-6 body-1">
+          <div className="mb-6 flex flex-col gap-y-6 text-xl">
             <p className="">
               火箭隊位於高雄的工程師培訓營，針對市場急需的前端、後端工程師與 UI
               設計師職缺而設。
@@ -103,7 +103,7 @@ const AboutRocketSection = () => {
         </div>
         <div className="w-159 shrink-0 h-148 overflow-y-auto scrollbar-hide">
           <div className="flex flex-col gap-y-8">
-            {ROCKETS.map((rocket, i) => (
+            {ROCKETS.map((rocket) => (
               <div
                 key={rocket.title}
                 className="h-70 rounded-[24px] flex justify-between bg-white py-9 px-9"
