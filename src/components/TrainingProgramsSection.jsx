@@ -133,7 +133,7 @@ const TrainingProgramsSection = () => {
   const [currentCoachIdex, setCurrentIndex] = useState(0);
   return (
     <>
-      <section className="flex flex-col items-center bg-Neutral-100">
+      <section className="flex flex-col items-center bg-Neutral-100 md:px-5 xl:px-0">
         <h2 className="heading-2! text-Neutral-700 text-center -mt-5 mb-2 lg:text-4xl! lg:mb-3">
           關於培訓
         </h2>
@@ -154,7 +154,7 @@ const TrainingProgramsSection = () => {
           </div>
         </div>
         {/* 組別卡片區 */}
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -165,8 +165,8 @@ const TrainingProgramsSection = () => {
           </div>
           <section>
             {/* 內容 */}
-            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-244.5 lg:justify-between lg:gap-12 lg:pt-16 lg:pb-10">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
                 <span>前端工程師</span>
               </h3>
               {/* 圖片 */}
@@ -178,9 +178,9 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="w-full flex flex-col px-12 gap-8 lg:px-0 lg:max-w-154.5">
+              <div className="w-full flex flex-col px-12 gap-9 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於前端
                   </p>
                   <p className="font-en">
@@ -190,24 +190,31 @@ const TrainingProgramsSection = () => {
                     <span className="block lg:inline">
                       開發，投入語言為HTML、CSS、
                     </span>
-                    JavaScript，
-                    <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
-                      適合有一些 HTML、CSS、JS 基礎的學員報名
+                    <span className="min-[428px]:whitespace-nowrap">
+                      JavaScript，
+                      <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
+                        適合有一些 HTML、CSS、JS 基
+                      </span>
+                    </span>
+                    <span className="box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
+                      礎的學員報名
                     </span>
                     。
                   </p>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     應徵門檻
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="min-w-3 text-center">1.</p>
                       <p>
                         <span className="lg:whitespace-nowrap">
-                          會用 CSS Flexbox 排過網頁，有 RWD
-                          響應式網頁概念，需提交 CSS 切版作品，
+                          <span className="min-[428px]:whitespace-nowrap">
+                            會用 CSS Flexbox 排過網頁，有 RWD 響
+                          </span>
+                          應式網頁概念，需提交 CSS 切版作品，
                           <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold lg:font-medium lg:bg-none">
                             請
                           </span>
@@ -228,10 +235,10 @@ const TrainingProgramsSection = () => {
                   </div>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="min-w-3 text-center">1.</p>
                       <p>
@@ -275,7 +282,7 @@ const TrainingProgramsSection = () => {
             </div>
           </section>
         </div>
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 mb-20 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -286,12 +293,12 @@ const TrainingProgramsSection = () => {
           </div>
           <section>
             {/* 內容 */}
-            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row lg: max-w-244.5 lg:justify-between lg:gap-15 lg:pt-16 lg:pb-10">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
                 <span>後端工程師</span>
               </h3>
               {/* 圖片 */}
-              <div className="w-54.5 h-50 mb-7 lg:w-70.5 lg:h-70 lg:mb-0">
+              <div className="w-54.5 h-50 mb-7 lg:w-full lg:max-w-75 lg:h-70 lg:mb-0">
                 <img
                   src={backendImgSm}
                   className="w-full h-full object-contain"
@@ -299,28 +306,28 @@ const TrainingProgramsSection = () => {
                 />
               </div>
               {/* 文字 */}
-              <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
-                <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+              <div className=" flex flex-col gap-8 px-12 lg:px-0 lg:max-w-152.75">
+                <section className="text-Neutral-700 ">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於後端
                   </p>
                   <p className="font-en">
                     <span className="min-[428px]:whitespace-nowrap">
                       後端工程師組主要專注為後端開發，投入後端
                     </span>
-                    語言為 C#、.Net，
+                    語言為&ensp;
                     <span className="inline box-decoration-clone bg-[linear-gradient(180deg,transparent_30%,var(--color-accent-yellow)_30%)] font-bold">
-                      適合無程式背景的學員報名
+                      C#、.Net，適合無程式背景的學員報名
                     </span>
                     。
                   </p>
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="w-3 text-center">1.</p>
                       <p>後端語言：C#</p>
@@ -359,7 +366,7 @@ const TrainingProgramsSection = () => {
             </div>
           </section>
         </div>
-        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 lg:r-sm">
+        <div className="relative bg-Neutral-white w-full border-2 border-Neutral-200 lg:w-full lg:max-w-269 md:r-sm">
           <div
             className="absolute z-0 inset-0 bg-repeat"
             style={{
@@ -370,8 +377,8 @@ const TrainingProgramsSection = () => {
           </div>
           <section>
             {/* 內容 */}
-            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-237 lg:justify-center lg:gap-12">
-              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap flex justify-center lg:left-0 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
+            <div className="relative flex flex-col items-center pt-12.5 pb-8 w-full mx-auto lg:flex-row-reverse lg: max-w-244.5 lg:justify-between lg:gap-12">
+              <h3 className="absolute -top-8 left-12 body-1! font-bold r-sm border-2 border-Neutral-700 text-Neutral-700 w-35.5 h-13.5 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap flex justify-center lg:-left-2 lg:text-2xl! lg:w-fit lg:h-15 lg:px-10">
                 <span>UI 設計師</span>
               </h3>
               {/* 圖片 */}
@@ -385,7 +392,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於設計
                   </p>
                   <p className="font-en">
@@ -401,10 +408,10 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2! font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
-                  <div className="font-en pl-3">
+                  <div className="font-en pl-2">
                     <div className="flex gap-1">
                       <p className="w-3 text-center">1.</p>
                       <p>
@@ -432,13 +439,13 @@ const TrainingProgramsSection = () => {
         </div>
 
         <section className="w-full pt-10 overflow-hidden xl:max-w-269 xl:mx-auto">
-          <div className="heading-3! text-Neutral-700 font-bold flex w-full px-12.25 xl:max-w-296">
+          <div className="heading-3 text-Neutral-700 font-bold flex w-full px-12.25 xl:px-0 xl:max-w-296">
             <p>教練團</p>
           </div>
           {/* 輪播卡片區 */}
-          <div className="pt-13">
-            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 xl:overflow-visible xl:scroll-pl-0">
-              <div className="flex gap-7 px-12.25 w-max pt-10 pb-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6">
+          <div>
+            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 scrollbar-hide xl:overflow-visible xl:scroll-pl-0">
+              <div className="flex gap-7 px-12.25 w-max pt-10 pb-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6 xl:pb-7">
                 {/* 圖片區 */}
 
                 {coachInfo.map((coach, index) => (
@@ -451,8 +458,8 @@ const TrainingProgramsSection = () => {
                         : "bg-Neutral-white"
                     }`}
                   >
-                    <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75 transition-transform group-hover:-translate-y-4">
-                      <p>{coach.name.split("").join(" ")}</p>
+                    <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 p-3 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-27 lg:p-3 lg:font-en lg:left-45.75 lg:text-[16px]! lg:-top-8 transition-transform group-hover:-translate-y-4">
+                      <p className="text-center w-full">{coach.name.split("").join(" ")}</p>
                     </div>
                     <img
                       className="absolute -top-6 w-55 h-auto object-bottom-left z-2 lg:w-45"
@@ -464,8 +471,8 @@ const TrainingProgramsSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-12.25 pt-10 pb-20 xl:max-w-296">
-            <h4 className="body-1! font-bold text-Neutral-700 mb-2">
+          <div className="w-full px-12.25 pb-8 xl:px-0 xl:max-w-296 xl:pb-20">
+            <h4 className="body-1 font-bold text-Neutral-700 mb-2">
               {coachInfo[currentCoachIdex].title} |{" "}
               {coachInfo[currentCoachIdex].name}
             </h4>
@@ -473,7 +480,7 @@ const TrainingProgramsSection = () => {
               {coachInfo[currentCoachIdex].experience.map((item, index) => (
                 <li key={index} className="flex gap-1 items-start">
                   <span className="text-2xl">・</span>
-                  <p className="self-center">{item}</p>
+                  <p className="self-center leading-[1.75]">{item}</p>
                 </li>
               ))}
             </ul>
@@ -481,16 +488,14 @@ const TrainingProgramsSection = () => {
         </section>
         <div className="group border-2 border-Neutral-700 bg-Primary-Blue-100 r-md w-83 h-20 flex gap-5 justify-center items-center -mb-11.5 cursor-pointer lg:w-full lg:max-w-233 lg:h-24 xl:max-w-269">
           <a
-            href="[https://register.rocket-coding.com/](https://register.rocket-coding.com/)"
+            href="https://register.rocket-coding.com/"
             target="_blank"
             className="flex justify-center item-center h-full"
           >
             <div className="heading-3! w-full h-full flex justify-center items-center text-Neutral-700 transition-transform duration-500 ease-in-out">
               <p>馬上報名！</p>
             </div>
-            <div
-              className="w-0 h-full aspect-square scale-0 opacity-0 transition-all origin-center duration-500 ease-in-out group-hover:w-12 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-16 group-hover:ml-5"
-            >
+            <div className="w-0 h-full aspect-square scale-0 opacity-0 transition-all origin-center duration-500 ease-in-out group-hover:w-12 group-hover:opacity-100 group-hover:scale-100 lg:group-hover:w-16 group-hover:ml-5">
               <img
                 src={goIcon}
                 alt="goIcon"
