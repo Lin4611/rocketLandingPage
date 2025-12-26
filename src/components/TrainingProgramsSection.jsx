@@ -180,7 +180,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col px-12 gap-9 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於前端
                   </p>
                   <p className="font-en">
@@ -203,7 +203,7 @@ const TrainingProgramsSection = () => {
                   </p>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     應徵門檻
                   </p>
                   <div className="font-en pl-2">
@@ -235,7 +235,7 @@ const TrainingProgramsSection = () => {
                   </div>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -308,7 +308,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className=" flex flex-col gap-8 px-12 lg:px-0 lg:max-w-152.75">
                 <section className="text-Neutral-700 ">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於後端
                   </p>
                   <p className="font-en">
@@ -324,7 +324,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -392,7 +392,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     關於設計
                   </p>
                   <p className="font-en">
@@ -408,7 +408,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3 lg:mb-4">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
