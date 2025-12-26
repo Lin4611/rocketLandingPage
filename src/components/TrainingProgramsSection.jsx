@@ -444,7 +444,7 @@ const TrainingProgramsSection = () => {
           </div>
           {/* 輪播卡片區 */}
           <div>
-            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 xl:overflow-visible xl:scroll-pl-0">
+            <div className="overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory scroll-pl-12.25 scrollbar-hide xl:overflow-visible xl:scroll-pl-0">
               <div className="flex gap-7 px-12.25 w-max pt-10 pb-6 xl:grid xl:grid-cols-4 xl:w-full xl:mx-auto xl:px-0 xl:gap-6 xl:pb-7">
                 {/* 圖片區 */}
 
