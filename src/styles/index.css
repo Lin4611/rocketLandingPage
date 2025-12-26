@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "./common/_colors.css";
+@import "./common/_font.css";
+@import "./common/_radius.css";
+
+@plugin "tailwind-scrollbar-hide";
+
+body {
+  font-family: "Josefin Sans", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@theme {
+  /* 跑馬燈動畫 */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  /* 跑馬燈速度 */
+  --animate-marquee: marquee 20s linear infinite;
+}
+
