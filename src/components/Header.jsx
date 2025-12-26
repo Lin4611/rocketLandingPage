@@ -13,6 +13,7 @@ import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-
 import { useState } from "react";
 import React from "react";
 import MarqueeContent from "./MarqueeContent";
+import { Link } from "react-router-dom";
 const marqueeItems = [
   "Let's join",
   "- 火箭隊培訓營 Rocket -",
@@ -35,6 +36,7 @@ const bannerTextList = [
     drop_shadow: "drop-shadow-[8px_8px_0_#BFC9F0]",
     btn: rocket_card_btn_sm,
     highlight_pic: rocket_card_highlight_sm,
+    link_path:'/'
   },
   {
     id: 2,
@@ -45,6 +47,7 @@ const bannerTextList = [
     btn_color: "bg-Primary-Violet-200",
     btn: coworkin_card_btn_sm,
     highlight_pic: coworkin_card_highlight_sm,
+    link_path:'/coworkingSpace'
   },
 ];
 const bannerTextListLg = [
@@ -58,6 +61,7 @@ const bannerTextListLg = [
     btn: rocket_card_btn_lg,
     drop_shadow: "shadow-[8px_8px_0_#BFC9F0]",
     highlight_pic: rocket_card_highlight_lg,
+    link_path:'/'
   },
   {
     id: 2,
@@ -73,8 +77,10 @@ const bannerTextListLg = [
     btn_color: "bg-Primary-Violet-200",
     drop_shadow: "shadow-[8px_8px_0_#EEE5FF]",
     highlight_pic: coworkin_card_highlight_lg,
+    link_path:'/coworkingSpace'
   },
 ];
+
 const Header = () => {
   const [isSelected, setIsSelected] = useState("火箭隊");
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -91,7 +97,8 @@ const Header = () => {
         {bannerTextList.map((item) => {
           const isActive = isSelected === item.title;
           return (
-            <div
+            <Link
+              to={item.link_path}
               className="w-full relative max-w-100 flex items-center z-5"
               key={item.id}
               onClick={() => {
@@ -139,7 +146,7 @@ const Header = () => {
                   className="absolute z-10 w-15 h-15 aspect-square object-contain left-0"
                 />
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -152,7 +159,8 @@ const Header = () => {
 
           return (
             <React.Fragment key={item.id}>
-              <div
+              <Link
+              to={item.link_path}
                 className={`w-full max-w-110 flex items-center z-5 relative cursor-pointer transform-all duration-300 ${
                   isSelected !== item.title ? "hover:-mt-4" : ""
                 }`}
@@ -225,7 +233,7 @@ const Header = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </Link>
               {index !== bannerTextListLg.length - 1 && (
                 <div className="heading-1 text-neutral-700 px-4 select-none">
                   X
