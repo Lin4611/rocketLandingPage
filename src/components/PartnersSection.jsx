@@ -78,7 +78,7 @@ const PartnersSection = () => {
       {/* mobile */}
       <div className="lg:hidden   text-Neutral-700 pl-12 py-4">
         <h3 className="-mt-8 mb-4 heading-3 leading-normal">主辦、協辦單位</h3>
-        <ul className="flex  gap-x-5 overflow-x-scroll">
+        <ul className="flex  gap-x-5 overflow-x-scroll scrollbar-hide">
           {data.map((d) => {
             return (
               <li className="">
@@ -104,10 +104,10 @@ const PartnersSection = () => {
         <h3 className="relative top-[-20px] mb-[12px] heading-3 leading-normal">
           主辦、協辦單位
         </h3>
-        <ul className="flex max-w[1368px] gap-x-6 overflow-x-scroll">
+        <ul className="flex max-w[1368px] gap-x-6 overflow-x-scroll scrollbar-hide">
           {data.map((d) => {
             return (
-              <li className="">
+              <li className="" key={d.name}>
                 <div className="img mb-4 w-49 h-37 rounded-[12px] bg-white flex justify-center items-center">
                   <img
                     className="object-contain max-w-40 max-h-25"
