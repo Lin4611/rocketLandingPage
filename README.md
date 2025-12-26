@@ -94,4 +94,23 @@ chore          | 建構程序或輔助工具的變動（如：npm 安裝、文�
 refactor       | 重構（既不是修復 Bug 也不是新增功能的程式碼變動）
 
 
+### **👥 團隊分工 | Team Collaboration**
 
+專案由 3 人小組共同開發，具體分工如下：
+
+#### **子勛 (Project Lead)**
+* **管理與規劃**：擔任 PM、負責專案初始化、制定開發規範與專案初始化架構。
+* **核心配置**：負責 React Router 路由設定、專案共同協作整合、火箭隊首頁整合。
+* **組件開發**：Header、Footer、共享空間頁 - PricingPlansSection。
+* **品質管控**：檢查細部排版與最終成果優化。
+
+#### **Ivy**
+* **首頁開發**：火箭隊首頁 - SuccessCasesSection (成功案例)、TrainingProgramsSection (訓練課程)。
+* **空間開發**：共享空間頁 - SpacesOverviewSection (空間概覽)。
+* **技術文件**：負責專案開發文件 (README) 之撰寫與維護。
+
+#### **昱嶔**
+* **首頁開發**：火箭隊首頁 - AboutRocketSection (關於火箭)、EnrollmentInfoSection (報名資訊)、PartnersSection (合作夥伴)。
+* **空間開發**：共享空間頁 - SharedSpaceSection (共享空間介紹)。
+
+---
