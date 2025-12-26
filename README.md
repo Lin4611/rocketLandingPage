@@ -36,7 +36,7 @@
 
 ```text
 rocket-landing-page/
-├─ public/           # 靜態資源（如：網頁標題icon）
+├─ public/           # 靜態資源（如：網頁標題icon、README文件的圖片資源）
 ├─ src/
 │  ├─ assets/        # 專案圖像資源（依頁面或功能分類）
 │  ├─ styles/        # 樣式管理系統
@@ -45,7 +45,9 @@ rocket-landing-page/
 │  ├─ components/    # 通用 UI 區塊組件 (Button, Header, Footer 等)
 │  ├─ pages/         # 頁面層級組件 (Home, About, Pricing 等)
 │  ├─ App.jsx        # 應用程式根組件 (App root)
-│  └─ main.jsx       # 專案入口點 (EntryPoint)
+│  └─ main.jsx       # 專案入口點 (EntryPoint) 
+   └─ hooks          # 自定義 Hook
+   └─ router         # 路由配置：定義應用程式的路徑對應與導航邏輯。
 ├─ .gitignore        # Git 忽略清單：定義不需上傳至版本控制的檔案。
 ├─ eslint.config.js  # 代碼規範設定：定義專案的程式碼品質檢查規則。
 ├─ index.html        # HTML 模板與字體載入
