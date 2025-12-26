@@ -5,7 +5,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
 
-這是一個基於 Figma 設計稿開發的單頁式應用程式（Single Page Application）。不僅展示了 Rocket Boot Camp 的豐富內容，更整合了共享辦公空間 (Coworking Space) 的資訊，透過流暢的動畫與響應式佈局優化的使用者體驗。
+這是一個基於 Figma 設計稿開發的單頁式應用程式（Single Page Application）。不僅展示了 Bootcamp Rocket 的豐富內容，更整合了共享辦公空間 (Co-working Space) 的資訊，透過流暢的動畫與響應式佈局優化的使用者體驗。
 
 設計稿來源：[Figma Design Link](https://www.figma.com/design/OTO27cmalpADJhZmBz3D4h/%E7%81%AB%E7%AE%AD%E9%9A%8A-Landing-page?node-id=0-1&t=s0vjrXr4qXTDX2bO-1)
 

@@ -81,7 +81,7 @@ const PartnersSection = () => {
         <ul className="flex  gap-x-5 overflow-x-scroll scrollbar-hide">
           {data.map((d) => {
             return (
-              <li className="">
+              <li key={d.name}>
                 <div className="img mb-3 w-39 h-30 rounded-[12px] bg-white flex justify-center items-center">
                   <img
                     className="object-cover max-h-20 "
@@ -107,7 +107,7 @@ const PartnersSection = () => {
         <ul className="flex max-w[1368px] gap-x-6 overflow-x-scroll scrollbar-hide">
           {data.map((d) => {
             return (
-              <li className="" key={d.name}>
+              <li key={d.name}>
                 <div className="img mb-4 w-49 h-37 rounded-[12px] bg-white flex justify-center items-center">
                   <img
                     className="object-contain max-w-40 max-h-25"
