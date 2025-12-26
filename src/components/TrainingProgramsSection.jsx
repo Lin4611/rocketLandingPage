@@ -180,7 +180,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col px-12 gap-9 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於前端
                   </p>
                   <p className="font-en">
@@ -203,7 +203,7 @@ const TrainingProgramsSection = () => {
                   </p>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     應徵門檻
                   </p>
                   <div className="font-en pl-2">
@@ -235,7 +235,7 @@ const TrainingProgramsSection = () => {
                   </div>
                 </section>
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -308,7 +308,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className=" flex flex-col gap-8 px-12 lg:px-0 lg:max-w-152.75">
                 <section className="text-Neutral-700 ">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於後端
                   </p>
                   <p className="font-en">
@@ -324,7 +324,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -392,7 +392,7 @@ const TrainingProgramsSection = () => {
               {/* 文字 */}
               <div className="w-full flex flex-col gap-8 px-12 lg:px-0 lg:max-w-154.5">
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     關於設計
                   </p>
                   <p className="font-en">
@@ -408,7 +408,7 @@ const TrainingProgramsSection = () => {
                 </section>
 
                 <section className="text-Neutral-700">
-                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-3">
+                  <p className="body-2 font-bold tracking-[0.02em] pb-1 border-b-[3px] border-Neutral-700 w-fit mb-4 lg:mb-5">
                     你會學到
                   </p>
                   <div className="font-en pl-2">
@@ -458,8 +458,8 @@ const TrainingProgramsSection = () => {
                         : "bg-Neutral-white"
                     }`}
                   >
-                    <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 py-3 px-5 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-26 lg:pd-4 lg:font-en lg:left-45.75 transition-transform group-hover:-translate-y-4">
-                      <p>{coach.name.split("").join(" ")}</p>
+                    <div className="absolute -top-6 left-61.5 r-sm border-2 border-Neutral-700 text-Neutral-700 w-12.5 h-28.25 p-3 bg-Neutral-white z-2 shadow-[4px_4px_0px_0px_var(--color-Neutral-700)] whitespace-nowrap body-2! font-bold [writing-mode:vertical-rl] flex justify-center items-center lg:w-12 lg:h-27 lg:p-3 lg:font-en lg:left-45.75 lg:text-[16px]! lg:-top-8 transition-transform group-hover:-translate-y-4">
+                      <p className="text-center w-full">{coach.name.split("").join(" ")}</p>
                     </div>
                     <img
                       className="absolute -top-6 w-55 h-auto object-bottom-left z-2 lg:w-45"
@@ -471,7 +471,7 @@ const TrainingProgramsSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-12.25 pb-20 xl:px-0 xl:max-w-296">
+          <div className="w-full px-12.25 pb-8 xl:px-0 xl:max-w-296 xl:pb-20">
             <h4 className="body-1 font-bold text-Neutral-700 mb-2">
               {coachInfo[currentCoachIdex].title} |{" "}
               {coachInfo[currentCoachIdex].name}
@@ -480,7 +480,7 @@ const TrainingProgramsSection = () => {
               {coachInfo[currentCoachIdex].experience.map((item, index) => (
                 <li key={index} className="flex gap-1 items-start">
                   <span className="text-2xl">・</span>
-                  <p className="self-center">{item}</p>
+                  <p className="self-center leading-[1.75]">{item}</p>
                 </li>
               ))}
             </ul>
