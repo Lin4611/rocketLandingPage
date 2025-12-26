@@ -81,8 +81,8 @@ const AboutRocketSection = () => {
       </section>
 
       {/* desktop */}
-      <section className="max-lg:hidden text-Neutral-700 flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-[1440px]:rounded-[40px]">
-        <div className="w-131.5 ">
+      <section className="max-lg:hidden text-Neutral-700 flex max-xl:flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-[1440px]:rounded-[40px]">
+        <div className="w-131.5 shrink">
           <h3 className="ml-1 font-en font-bold text-[20px] leading-normal tracking-[0.4px]">
             About Rocket
           </h3>
@@ -101,7 +101,7 @@ const AboutRocketSection = () => {
             </p>
           </div>
         </div>
-        <div className="w-159 h-148 overflow-y-auto scrollbar-hide">
+        <div className="w-159 shrink-0 h-148 overflow-y-auto scrollbar-hide">
           <div className="flex flex-col gap-y-8">
             {ROCKETS.map((rocket, i) => (
               <div
