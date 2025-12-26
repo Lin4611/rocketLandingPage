@@ -10,7 +10,7 @@
 設計稿來源：[Figma Design Link](https://www.figma.com/design/OTO27cmalpADJhZmBz3D4h/%E7%81%AB%E7%AE%AD%E9%9A%8A-Landing-page?node-id=0-1&t=s0vjrXr4qXTDX2bO-1)
 
 ---
-## 👀 專案預覽 | Technical Stack
+## 👀 專案預覽 | Project Preview
 ![主畫面](./public/navbar.png)
 ![關於培訓](./public/training-programs.png)
 ![場域說明](./public/spaces.png)
