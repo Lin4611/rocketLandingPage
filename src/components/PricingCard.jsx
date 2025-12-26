@@ -29,7 +29,7 @@ const PricingCard = ({ title, price, features, isActive, onClick }) => {
             {item.highlight ? (
               <div className="relative">
                 <p className="relative z-10 lg:body-1">{item.text}</p>
-                <span className="absolute inset-x-0 bottom-0.5 h-2/5 bg-accent-orange z-0"></span>
+                <span className="absolute inset-x-0 bottom-1.5 h-2/5 bg-accent-orange z-0"></span>
               </div>
             ) : (
               <p className="lg:body-1">{item.text}</p>
