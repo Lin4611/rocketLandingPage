@@ -103,12 +103,13 @@ const getIconsUrl = (name) => {
 const SpacesOverviewSection = () => {
   return (
     <>
-      <section className="flex flex-col items-center pt-12 w-full px-12 max-w-269 mx-auto lg:px-0 xl:pt-20">
+      <section className="flex flex-col items-center pt-12 w-full px-12 max-w-269 mx-auto xl:px-0 xl:pt-20">
         <h2 className="heading-2 text-Neutral-700 mb-4 xl:mb-15">場域說明</h2>
         {/* 硬體區塊 */}
         <div className="w-full flex justify-start mb-4 xl:mb-6">
-          <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
+          <h4 className="relative heading-4 text-Neutral-700">
             #硬體
+            <span className="absolute bg-accent-orange w-full h-[50%] top-[35%] left-0 -z-1"></span>
           </h4>
         </div>
         <div className="w-full grid grid-cols-1 gap-10">
@@ -159,8 +160,9 @@ const SpacesOverviewSection = () => {
         </div>
         {/* 服務區塊 */}
         <div className="w-full max-w-269 flex justify-start mt-12 mb-7 xl:mt-19 xl:mb-8">
-          <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
+          <h4 className="relative heading-4 text-Neutral-700]">
             #服務
+            <span className="absolute bg-accent-orange w-full h-[50%] top-[35%] left-0 -z-1"></span>
           </h4>
         </div>
         <div className="w-full grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
@@ -168,7 +170,7 @@ const SpacesOverviewSection = () => {
             (service) => (
               <div
                 key={service.id}
-                className="flex gap-4 md:flex-col md:items-center md:text-center"
+                className="flex gap-4 md:flex-col md:items-center md:text-center lg:gap-6"
               >
                 <div className="w-12 min-w-12 md:w-20 lg:w-30 shrink-0">
                   <img
@@ -177,7 +179,7 @@ const SpacesOverviewSection = () => {
                     className="w-full aspect-square"
                   />
                 </div>
-                <div className="w-full flex flex-col gap-1">
+                <div className="w-full flex flex-col gap-1 lg:gap-2">
                   <p className="text-Neutral-700 font-bold md:text-[18px]">
                     {service.title}
                   </p>
