@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay} from "swiper/modules";
+import { Autoplay ,Mousewheel} from "swiper/modules";
 
 import "swiper/css";
 
@@ -103,15 +103,16 @@ const getIconsUrl = (name) => {
 const SpacesOverviewSection = () => {
   return (
     <>
-      <section className="flex flex-col gap-4 items-center pt-12 w-full max-w-269 mx-auto lg:pb-20">
-        <h2 className="heading-2 text-Neutral-700">場域說明</h2>
+      <section className="flex flex-col items-center pt-12 w-full px-12 max-w-269 mx-auto xl:px-0 xl:pt-20">
+        <h2 className="heading-2 text-Neutral-700 mb-4 xl:mb-15">場域說明</h2>
         {/* 硬體區塊 */}
-        <div className="w-full flex justify-start h-7.5 mb-6 px-12 lg:px-0">
-          <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
+        <div className="w-full flex justify-start mb-4 xl:mb-6">
+          <h4 className="relative heading-4 text-Neutral-700">
             #硬體
+            <span className="absolute bg-accent-orange w-full h-[50%] top-[35%] left-0 -z-1"></span>
           </h4>
         </div>
-        <div className="w-full grid grid-cols-1 gap-10 px-12 lg:px-0">
+        <div className="w-full grid grid-cols-1 gap-10">
           {SpacesInfo.filter((item) => item.category === "硬體").map(
             (space, index) => (
               <div
@@ -158,17 +159,18 @@ const SpacesOverviewSection = () => {
           )}
         </div>
         {/* 服務區塊 */}
-        <div className="w-full max-w-269 flex justify-start mt-8 mb-7 px-12 lg:px-0">
-          <h4 className="heading-4 text-Neutral-700 bg-[linear-gradient(180deg,transparent_35%,var(--color-accent-orange)_30%)]">
+        <div className="w-full max-w-269 flex justify-start mt-12 mb-7 xl:mt-19 xl:mb-8">
+          <h4 className="relative heading-4 text-Neutral-700]">
             #服務
+            <span className="absolute bg-accent-orange w-full h-[50%] top-[35%] left-0 -z-1"></span>
           </h4>
         </div>
-        <div className="w-full grid grid-cols-1 gap-7 px-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12 lg:px-0">
+        <div className="w-full grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
           {SpacesInfo.filter((item) => item.category === "服務").map(
             (service) => (
               <div
                 key={service.id}
-                className="flex gap-4 md:flex-col md:items-center md:text-center"
+                className="flex gap-4 md:flex-col md:items-center md:text-center lg:gap-6"
               >
                 <div className="w-12 min-w-12 md:w-20 lg:w-30 shrink-0">
                   <img
@@ -177,7 +179,7 @@ const SpacesOverviewSection = () => {
                     className="w-full aspect-square"
                   />
                 </div>
-                <div className="w-full flex flex-col gap-1">
+                <div className="w-full flex flex-col gap-1 lg:gap-2">
                   <p className="text-Neutral-700 font-bold md:text-[18px]">
                     {service.title}
                   </p>
@@ -191,14 +193,15 @@ const SpacesOverviewSection = () => {
         </div>
       </section>
       {/* 照片輪播區 */}
-        <div className="w-full max-w-360 pt-10 pl-12 pb-20 lg:px-0 lg:mx-auto ">
+        <div className="w-full max-w-360 pt-10 pl-12 pb-12 lg:px-0 lg:mx-auto xl:py-20 ">
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay, Mousewheel]}
             spaceBetween={24}
             slidesPerView={1.15}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true}}
             allowTouchMove={true}
+            mousewheel={{forceToAxis:true}}
             breakpoints={{
               768: { slidesPerView: 1.2 },
               1024: { slidesPerView: 2.2, centeredSlides: true },
