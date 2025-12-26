@@ -48,26 +48,31 @@ const AboutRocketSection = () => {
 
           <div className="flex flex-col gap-y-6">
             {ROCKETS.map((rocket) => (
-              <div className="rounded-[24px] bg-white py-4 px-5">
+              <div
+                key={rocket.title}
+                className="rounded-[24px] bg-white py-4 px-5"
+              >
                 <h4 className="mb-2 heading-3 text-Neutral-700">
                   {rocket.title}
                 </h4>
                 <div className="mb-3 text-Primary-Blue-400 flex gap-x-2 ">
-                  {rocket.tags.map((tag, index) => (
-                    <div
-                      key={index}
-                      className="border-2 border-Primary-Blue-300 rounded-[20px] py-2 px-4"
+                  {rocket.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[12px] tracking-[0.24px] border-2 border-Primary-Blue-300 rounded-[20px] py-2 px-4"
                     >
                       {tag}
-                    </div>
+                    </span>
                   ))}
                 </div>
-                <div className="mb-7 text-Neutral-500">
-                  {rocket.titleEn}
-                </div>
+                <div className="mb-7 text-[20px] leading-normal tracking-[0.4px] text-Neutral-500">{rocket.titleEn}</div>
                 <div className="flex flex-col items-center justify-center ">
-                  <img className="object-cover z-10" src={rocket.img} alt={rocket.title} />
-                  <div className=" w-full h-15 -mt-13 rounded-[12px] bg-neutral-200"></div>
+                  <img
+                    className="object-cover z-10"
+                    src={rocket.img}
+                    alt={rocket.title}
+                  />
+                  <div className=" w-full h-15 -mt-13 rounded-[12px] bg-Neutral-200"></div>
                 </div>
               </div>
             ))}
@@ -76,13 +81,13 @@ const AboutRocketSection = () => {
       </section>
 
       {/* desktop */}
-      <section className="max-lg:hidden text-Neutral-700 flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-xl:rounded-[40px]">
+      <section className="max-lg:hidden text-Neutral-700 flex flex-wrap justify-center gap-x-33.5 bg-Primary-Blue-100 w-full mx-auto py-[60px] px-[72px] max-[1440px]:rounded-[40px]">
         <div className="w-131.5 ">
-          <h3 className="font-en font-bold text-[20px] leading-normal tracking-[0.4px]">
+          <h3 className="ml-1 font-en font-bold text-[20px] leading-normal tracking-[0.4px]">
             About Rocket
           </h3>
-          <h2 className="heading-1 ml-1 mb-10">什麼是火箭隊</h2>
-          <div className="mb-6 flex flex-col gap-y-6 body-3 text-[20px]">
+          <h2 className="heading-1 mb-10">什麼是火箭隊</h2>
+          <div className="mb-6 flex flex-col gap-y-6 body-1">
             <p className="">
               火箭隊位於高雄的工程師培訓營，針對市場急需的前端、後端工程師與 UI
               設計師職缺而設。
@@ -98,23 +103,26 @@ const AboutRocketSection = () => {
         </div>
         <div className="w-159 h-148 overflow-y-auto ">
           <div className="flex flex-col gap-y-8">
-            {ROCKETS.map((rocket) => (
-              <div className="h-70 rounded-[24px] flex justify-between bg-white py-9 px-9">
+            {ROCKETS.map((rocket, i) => (
+              <div
+                key={rocket.title}
+                className="h-70 rounded-[24px] flex justify-between bg-white py-9 px-9"
+              >
                 <div className="">
                   <h4 className="mb-3 heading-3 text-Neutral-700">
                     {rocket.title}
                   </h4>
                   <div className="mb-18 text-Primary-Blue-400 flex gap-x-3">
-                    {rocket.tags.map((tag, index) => (
+                    {rocket.tags.map((tag) => (
                       <div
-                        key={index}
+                        key={tag}
                         className="border-2 border-Primary-Blue-300 rounded-[20px] py-2 px-4"
                       >
                         {tag}
                       </div>
                     ))}
                   </div>
-                  <div className="font-bold text-[24px] tracking-[1.5] leading-[1.2px] text-Neutral-500">
+                  <div className="font-bold text-[24px] text-Neutral-500">
                     {rocket.titleEn}
                   </div>
                 </div>
@@ -124,7 +132,7 @@ const AboutRocketSection = () => {
                     src={rocket.img}
                     alt={rocket.title}
                   />
-                  <div className="w-42.25 h-52 absolute right-0 rounded-[12px] bg-neutral-200"></div>
+                  <div className="w-42.25 h-52 absolute right-0 rounded-[12px] bg-Neutral-200"></div>
                 </div>
               </div>
             ))}
