@@ -12,19 +12,7 @@ import coworkin_card_btn_lg from "../assets/imgs/icon/banner-btn-coworking-lg.sv
 import coworkin_card_highlight_lg from "../assets/imgs/icon/ic-highlight-rocket-lg.svg";
 import { useState } from "react";
 import React from "react";
-import MarqueeContent from "./MarqueeContent";
-import { Link } from "react-router-dom";
-const marqueeItems = [
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-  "Let's join",
-  "- 火箭隊培訓營 Rocket -",
-  "- 共同空間 Co-working space -",
-];
+import { Link, useLocation } from "react-router-dom";
 const banner_bg = `bg-[url('../assets/imgs/bg/banner-bg.png')]`;
 const bannerTextList = [
   {
@@ -80,16 +68,15 @@ const bannerTextListLg = [
     link_path:'/coworkingSpace'
   },
 ];
-
 const Header = () => {
-  const [isSelected, setIsSelected] = useState("火箭隊");
+  
   const [hoveredItem, setHoveredItem] = useState(null);
+  const location = useLocation();
+  const allItems = [...bannerTextList, ...bannerTextListLg];
+  const matchItem = allItems.find((item) => item.link_path === location.pathname);
+  const isSelected = matchItem ? matchItem.title : "火箭隊";
   return (
     <header className="w-full flex flex-col items-center justify-center">
-      <div className="sticky top-0 right-0 z-50 flex w-full overflow-hidden bg-Neutral-white backdrop-blur py-5 shadow-sm">
-        <MarqueeContent items={marqueeItems} />
-        <MarqueeContent items={marqueeItems} />
-      </div>
       <div className="w-full relative flex flex-col justify-between items-center py-15 px-10 gap-12 transform-all duration-300 md:hidden lg:hidden">
         <div
           className={`${banner_bg} absolute inset-0 bg-repeat opacity-50 z-0`}
@@ -101,9 +88,6 @@ const Header = () => {
               to={item.link_path}
               className="w-full relative max-w-100 flex items-center z-5"
               key={item.id}
-              onClick={() => {
-                setIsSelected(item.title);
-              }}
             >
               {!isActive && (
                 <div className="absolute inset-0 bg-white/60 z-20" />
@@ -132,7 +116,7 @@ const Header = () => {
                     {item.title}
                   </h1>
                 </div>
-                <h2 className="heading-4 font-en text-Neutral-500 pl-1">
+                <h2 className="heading-4 font-en text-Neutral-500 pl-1 font-bold">
                   {item.en_title}
                 </h2>
               </div>
@@ -164,9 +148,6 @@ const Header = () => {
                 className={`w-full max-w-110 flex items-center z-5 relative cursor-pointer transform-all duration-300 ${
                   isSelected !== item.title ? "hover:-mt-4" : ""
                 }`}
-                onClick={() => {
-                  setIsSelected(item.title);
-                }}
                 onMouseEnter={() => setHoveredItem(item.title)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
@@ -188,18 +169,18 @@ const Header = () => {
                     <div className="absolute inset-0 bg-white/60 z-20 pointer-events-none rounded-[inherit]" />
                   )}
                   <div
-                    className={`flex flex-col items-center justify-center -mt-9 relative z-30 ${
+                    className={`w-full max-w-52.75 flex flex-col items-center justify-center -mt-7  lg:-mt-9 relative z-30 ${
                       !isActive ? "opacity-60" : ""
                     }`}
                   >
-                    <h1 className="heading-1 text-Neutral-700 md:text-[32px]">
+                    <h1 className="text-[36px] text-Neutral-700 lg:text-[48px] font-bold">
                       {item.title}
                     </h1>
-                    <h2 className="font-en text-neutral-500 text-xl font-bold ">
+                    <h2 className="font-en text-neutral-500 text-2xl font-bold">
                       {item.subTitle}
                     </h2>
                   </div>
-                  <div className="flex flex-col items-center justify-center gap-4">
+                  <div className="flex flex-col items-center justify-center gap-4 max-w-66">
                     <img
                       src={item.img}
                       alt={item.title}
@@ -208,7 +189,7 @@ const Header = () => {
                     <div className="flex flex-col justify-center items-center">
                       {item.desc.map((text) => (
                         <span
-                          className="text-xl font-bold leading-[1.75] text-neutral-700 md:text-[16px]"
+                          className="text-[16px] font-bold leading-[1.75] text-neutral-700 lg:text-xl"
                           key={text}
                         >
                           {text}
