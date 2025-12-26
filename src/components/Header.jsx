@@ -135,7 +135,7 @@ const Header = () => {
         })}
       </div>
       <div
-        className={`hidden w-full relative md:flex lg:flex justify-center items-center md:gap-15 lg:gap-20.5 ${banner_bg} absolute inset-0 bg-repeat pt-23 pb-30.5 px-12 transform-all duration-300`}
+        className={`hidden w-full relative md:flex lg:flex justify-center items-center md:gap-15 lg:gap-20.5 ${banner_bg} absolute inset-0 bg-repeat pt-39 pb-30.5 px-12 transform-all duration-300`}
       >
         {bannerTextListLg.map((item, index) => {
           const isActive =
