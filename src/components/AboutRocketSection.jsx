@@ -101,7 +101,7 @@ const AboutRocketSection = () => {
             </p>
           </div>
         </div>
-        <div className="w-159 shrink-0 h-148 overflow-y-auto ">
+        <div className="w-159 shrink-0 h-148 overflow-y-auto scrollbar-hide">
           <div className="flex flex-col gap-y-8">
             {ROCKETS.map((rocket, i) => (
               <div
